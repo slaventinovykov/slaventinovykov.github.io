@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="system">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,9 +8,10 @@
 <style>
 :root{color-scheme:dark;--bg:#071522;--panel:#0c2033;--text:#eaf2ff;--muted:#a8b7c7;--border:#23445f;--accent:#6aa8ff;--danger:#ff6b6b;--amber:#f5bf61;--field:#0e263a;--results:#06121e;--ok:#81c784;--radius:12px}
 [data-theme=light]{color-scheme:light;--bg:#f6f9fc;--panel:#fff;--text:#0b1b2b;--muted:#5a6b7a;--border:#d2deeb;--accent:#2464c4;--danger:#b92332;--amber:#986000;--field:#fff;--results:#edf3f9;--ok:#2e7d32}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-bottom:100px}body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;color:inherit}button:disabled{opacity:.45;cursor:default}[hidden]{display:none!important}
-.wrap{max-width:720px;margin:0 auto;padding:18px 18px calc(92px + env(safe-area-inset-bottom));padding-top:max(18px,env(safe-area-inset-top))}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:19px}h1{font-size:20px;margin:0;letter-spacing:.2px}h2{font-size:18px;margin:0 0 18px}p{line-height:1.5}header .subtitle{font-size:12px;color:var(--muted);margin-top:2px}.field{min-width:0}.field label,.label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}input,select,textarea,.picker,.readonly{width:100%;min-height:46px;background:var(--field);border:1px solid var(--border);border-radius:var(--radius);padding:11px 12px;color:var(--text);font-size:16px;outline:none}.readonly{display:flex;align-items:center;font-variant-numeric:tabular-nums}.picker{display:flex;text-align:left;align-items:center;justify-content:space-between;gap:10px}.picker::after{content:'⌄';font-size:16px;flex-shrink:0;color:var(--muted)}.picker span{overflow-wrap:anywhere}.placeholder{color:var(--muted);font-weight:600}.picker.placeholder span{color:var(--muted);font-weight:600}input::placeholder,textarea::placeholder{color:var(--muted);opacity:1;font-family:inherit;font-size:16px;font-weight:600}select:has(option:checked[value=""]){color:var(--muted);font-weight:600}.selected{color:var(--ok)}button:focus-visible{outline:1px solid var(--muted);outline-offset:1px}.picker:focus-visible{outline:none;outline-offset:0}input:focus,textarea:focus{outline:none;box-shadow:none;border-color:var(--muted)}select:focus,select:focus-visible{outline:none;box-shadow:none}.invalid{border-color:var(--danger)!important;box-shadow:none}.caution-field{border-color:var(--amber)}.hint{font-size:12px;margin:6px 1px 0;line-height:1.4;color:var(--muted)}#deicingLocation{font-size:13.5px;line-height:1.4;margin-top:7px}.amber{color:var(--amber)}.danger{color:var(--danger)}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fields{display:grid;gap:11px}.group{border-top:1px solid var(--border);margin-top:17px;padding-top:13px}.group-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px;min-height:20px}.eyebrow{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}.mode{display:flex;gap:2px}.mode button{background:transparent;border:0;border-radius:5px;color:var(--muted);padding:3px 7px;font-size:11px;font-weight:600}.mode button[aria-pressed=true]{background:var(--border);color:var(--text)}.primary,.secondary{width:100%;min-height:46px;padding:12px 16px;border-radius:var(--radius);font-weight:650;border:1px solid var(--border);background:var(--panel)}.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}#calculateBtn{margin-top:17px}.link{border:0;background:none;color:var(--accent);font-size:13px;padding:10px 8px;min-height:40px}.check{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);line-height:1.4}.check input{width:18px;min-height:18px;height:18px;flex:none;accent-color:var(--accent)}.check label{margin:0}.result{margin-top:20px;border-radius:12px;background:var(--results);border-top:1px solid var(--border);padding:22px 16px 16px;text-align:center;scroll-margin-top:15px;outline:none}.hot{font-size:68px;line-height:1.1;font-weight:750;letter-spacing:-2px;font-variant-numeric:tabular-nums;margin:12px 0 8px}.context{font-size:13px;line-height:1.45;color:var(--muted);margin:0 0 18px}.metrics{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:4px}.metric+.metric{border-left:1px solid var(--border)}.metric .label{font-size:11px}.metric strong{font-size:14px;display:block;font-variant-numeric:tabular-nums}.failure-title{font-size:20px;line-height:1.3;color:var(--danger);letter-spacing:.025em}.reason{font-size:14px;line-height:1.5;margin:14px 0 2px}.result .primary{margin-top:6px}.toolbar{position:fixed;bottom:0;left:0;right:0;border-top:1px solid var(--border);background:var(--bg);padding-bottom:env(safe-area-inset-bottom);z-index:10}.nav-inner{max-width:720px;display:grid;grid-template-columns:repeat(3,1fr);margin:auto}.nav-btn{min-height:66px;border:0;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11px}.nav-btn[aria-current=page]{color:var(--accent)}svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.screen{outline:none}.screen:not(.active){display:none}.session-timer{text-align:center;padding:20px 0}.session-timer .hot{font-size:52px;letter-spacing:-1px}.session-details{display:grid;gap:12px;margin:14px 0 22px}.detail{display:flex;justify-content:space-between;gap:20px;font-size:13px}.detail span:first-child{color:var(--muted)}.detail strong{text-align:right;font-weight:600}.event{padding:10px 0;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}.empty{color:var(--muted);font-size:14px;padding:30px 0}.settings-item{border-bottom:1px solid var(--border);padding:15px 0;font-size:13px}.settings-item p{margin:6px 0;color:var(--muted);font-size:12px}.settings-item summary{cursor:pointer;min-height:30px;display:flex;align-items:center}.settings-item a{color:var(--accent)}.settings-item code{font-size:10px;overflow-wrap:anywhere}
-.overlay{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.52);display:flex;justify-content:center;align-items:flex-end}.sheet{width:min(100%,640px);max-height:min(86dvh,780px);background:var(--panel);border:1px solid var(--border);border-bottom:0;border-radius:20px 20px 0 0;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -12px 48px #0003}.handle{height:4px;width:34px;background:var(--muted);opacity:.35;border-radius:4px;margin:9px auto 0}.sheet-header{display:flex;align-items:center;justify-content:space-between;padding:9px 16px 7px}.sheet-header h2{margin:0;font-size:17px}.close{width:40px;height:40px;border:0;background:transparent;color:var(--muted);font-size:23px}.sheet-search{padding:0 16px 12px}.sheet-search input{background:var(--field)}.sheet-body{overflow:auto;overscroll-behavior:contain;padding:0 16px 18px;min-height:0}.pick-section{margin:5px 0 0;padding:15px 0 6px;font-size:10px;font-weight:650;letter-spacing:.065em;color:var(--muted);border-top:1px solid var(--border)}.pick-section:first-child{border:0;padding-top:6px}.pick-row{width:100%;text-align:left;display:block;border:0;border-bottom:1px solid var(--border);padding:12px 1px;background:transparent;min-height:58px;line-height:1.35}.pick-row .name{font-size:15px;font-weight:550;display:block}.pick-row .sub{display:block;color:var(--muted);font-size:12px;margin-top:4px}.pick-row[aria-selected=true] .name{color:var(--ok)}.pick-row:focus-visible{outline-offset:-2px}.notes-list{font-size:14px;line-height:1.6;margin:0;padding-left:19px}.notes-list li+li{margin-top:12px}.sheet-body .primary{margin-top:18px}.metar-controls{display:grid;grid-template-columns:1fr auto;gap:6px;align-items:end}.metar-controls textarea{font-family:ui-monospace,monospace;font-size:16px;min-height:73px;resize:vertical}.metar-controls button{width:auto;min-height:46px}.decoded-weather{display:grid;gap:6px;padding:2px 1px 0}.decoded-title{margin-top:1px;color:var(--muted);font-size:11px;font-weight:650;letter-spacing:.075em;text-transform:uppercase}.decoded-line{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;align-items:baseline;min-height:22px}.decoded-label{color:var(--muted);font-size:12px}.decoded-value{color:var(--ok);font-size:16px;font-weight:600;line-height:1.35;overflow-wrap:anywhere}.decoded-value span{font:inherit}.decoded-weather .hint{margin-top:0}.decoded-weather #autoIntensity{margin-top:2px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.small-note{color:var(--muted);font-size:12px;line-height:1.5}.session-update-note{margin-bottom:12px;font-size:13px;color:var(--muted)}
+@media(prefers-color-scheme:light){[data-theme=system]{color-scheme:light;--bg:#f6f9fc;--panel:#fff;--text:#0b1b2b;--muted:#5a6b7a;--border:#d2deeb;--accent:#2464c4;--danger:#b92332;--amber:#986000;--field:#fff;--results:#edf3f9;--ok:#2e7d32}}
+*{box-sizing:border-box}html{height:100%;-webkit-text-size-adjust:100%;overscroll-behavior:none}body{margin:0;height:100dvh;min-height:100dvh;overflow:hidden;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;overscroll-behavior:none}button,input,select,textarea{font:inherit}button{cursor:pointer;color:inherit}button:disabled{opacity:.45;cursor:default}[hidden]{display:none!important}
+.wrap{flex:1 1 auto;min-height:0;width:100%;max-width:720px;margin:0 auto;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;scroll-padding-bottom:24px;padding:18px 18px 24px;padding-top:max(18px,env(safe-area-inset-top))}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:19px}h1{font-size:20px;margin:0;letter-spacing:.2px}h2{font-size:18px;margin:0 0 18px}p{line-height:1.5}header .subtitle{font-size:12px;color:var(--muted);margin-top:2px}.field{min-width:0}.field label,.label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}input,select,textarea,.picker,.readonly{width:100%;min-height:46px;background:var(--field);border:1px solid var(--border);border-radius:var(--radius);padding:11px 12px;color:var(--text);font-size:16px;outline:none}.readonly{display:flex;align-items:center;font-variant-numeric:tabular-nums}.picker{display:flex;text-align:left;align-items:center;justify-content:space-between;gap:10px}.picker::after{content:'⌄';font-size:16px;flex-shrink:0;color:var(--muted)}.picker span{overflow-wrap:anywhere}.placeholder{color:var(--muted);font-weight:600}.picker.placeholder span{color:var(--muted);font-weight:600}input::placeholder,textarea::placeholder{color:var(--muted);opacity:1;font-family:inherit;font-size:16px;font-weight:600}select:has(option:checked[value=""]){color:var(--muted);font-weight:600}.selected{color:var(--ok)}button:focus-visible{outline:1px solid var(--muted);outline-offset:1px}.picker:focus-visible{outline:none;outline-offset:0}input:focus,textarea:focus{outline:none;box-shadow:none;border-color:var(--muted)}select:focus,select:focus-visible{outline:none;box-shadow:none}.invalid{border-color:var(--danger)!important;box-shadow:none}.caution-field{border-color:var(--amber)}.hint{font-size:12px;margin:6px 1px 0;line-height:1.4;color:var(--muted)}#deicingLocation{font-size:13.5px;line-height:1.4;margin-top:7px}.amber{color:var(--amber)}.danger{color:var(--danger)}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fields{display:grid;gap:11px}.group{border-top:1px solid var(--border);margin-top:17px;padding-top:13px}.group-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px;min-height:20px}.eyebrow{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}.mode{display:flex;gap:2px}.mode button{background:transparent;border:0;border-radius:5px;color:var(--muted);padding:3px 7px;font-size:11px;font-weight:600}.mode button[aria-pressed=true]{background:var(--border);color:var(--text)}.primary,.secondary{width:100%;min-height:46px;padding:12px 16px;border-radius:var(--radius);font-weight:650;border:1px solid var(--border);background:var(--panel)}.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}#calculateBtn{margin-top:17px}.link{border:0;background:none;color:var(--accent);font-size:13px;padding:10px 8px;min-height:40px}.check{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);line-height:1.4}.check input{width:18px;min-height:18px;height:18px;flex:none;accent-color:var(--accent)}.check label{margin:0}.result{margin-top:20px;border-radius:12px;background:var(--results);border-top:1px solid var(--border);padding:22px 16px 16px;text-align:center;scroll-margin-top:15px;outline:none}.hot{font-size:68px;line-height:1.1;font-weight:750;letter-spacing:-2px;font-variant-numeric:tabular-nums;margin:12px 0 8px}.context{font-size:13px;line-height:1.45;color:var(--muted);margin:0 0 18px}.metrics{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:4px}.metric+.metric{border-left:1px solid var(--border)}.metric .label{font-size:11px}.metric strong{font-size:14px;display:block;font-variant-numeric:tabular-nums}.failure-title{font-size:20px;line-height:1.3;color:var(--danger);letter-spacing:.025em}.reason{font-size:14px;line-height:1.5;margin:14px 0 2px}.result .primary{margin-top:6px}.toolbar{position:relative;flex:0 0 auto;width:100%;border-top:1px solid var(--border);background:var(--bg);padding-bottom:env(safe-area-inset-bottom);z-index:10;isolation:isolate}body.keyboard-open .toolbar{display:none}body.keyboard-open .wrap{scroll-behavior:auto}.nav-inner{max-width:720px;display:grid;grid-template-columns:repeat(3,1fr);margin:auto}.nav-btn{min-height:66px;border:0;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11px}.nav-btn[aria-current=page]{color:var(--accent)}svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.screen{outline:none}.screen:not(.active){display:none}.session-timer{text-align:center;padding:20px 0}.session-timer .hot{font-size:52px;letter-spacing:-1px}.session-details{display:grid;gap:12px;margin:14px 0 22px}.detail{display:flex;justify-content:space-between;gap:20px;font-size:13px}.detail span:first-child{color:var(--muted)}.detail strong{text-align:right;font-weight:600}.event{padding:10px 0;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}.empty{color:var(--muted);font-size:14px;padding:30px 0}.settings-item{border-bottom:1px solid var(--border);padding:15px 0;font-size:13px}.settings-item p{margin:6px 0;color:var(--muted);font-size:12px}.settings-item summary{cursor:pointer;min-height:30px;display:flex;align-items:center}.settings-item a{color:var(--accent)}.settings-item code{font-size:10px;overflow-wrap:anywhere}
+.overlay{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.52);display:flex;justify-content:center;align-items:flex-end;overflow:hidden;overscroll-behavior:none}.sheet{width:min(100%,640px);max-width:100%;min-width:0;overflow-x:hidden;overscroll-behavior:contain;max-height:min(86dvh,780px);background:var(--panel);border:1px solid var(--border);border-bottom:0;border-radius:20px 20px 0 0;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -12px 48px #0003}.handle{height:4px;width:34px;background:var(--muted);opacity:.35;border-radius:4px;margin:9px auto 0}.sheet-header{display:flex;align-items:center;justify-content:space-between;padding:9px 16px 7px}.sheet-header h2{margin:0;font-size:17px}.close{width:40px;height:40px;border:0;background:transparent;color:var(--muted);font-size:23px}.sheet-search{padding:0 16px 12px}.sheet-search input{background:var(--field)}.sheet-body{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding:0 16px 18px;min-height:0;min-width:0;max-width:100%}.pick-section{margin:5px 0 0;padding:15px 0 6px;font-size:10px;font-weight:650;letter-spacing:.065em;color:var(--muted);border-top:1px solid var(--border)}.pick-section:first-child{border:0;padding-top:6px}.pick-row{width:100%;text-align:left;display:block;border:0;border-bottom:1px solid var(--border);padding:12px 1px;background:transparent;min-height:58px;line-height:1.35}.pick-row .name{font-size:15px;font-weight:550;display:block}.pick-row .sub{display:block;color:var(--muted);font-size:12px;margin-top:4px}.pick-row[aria-selected=true] .name{color:var(--ok)}.pick-row:focus-visible{outline-offset:-2px}.notes-list{font-size:14px;line-height:1.6;margin:0;padding-left:19px}.notes-list li+li{margin-top:12px}.sheet-body .primary{margin-top:18px}.metar-controls{display:grid;grid-template-columns:1fr auto;gap:6px;align-items:end}.metar-controls textarea{font-family:ui-monospace,monospace;font-size:16px;min-height:73px;resize:vertical}.metar-controls button{width:auto;min-height:46px}.decoded-weather{display:grid;gap:6px;padding:2px 1px 0}.decoded-title{margin-top:1px;color:var(--muted);font-size:11px;font-weight:650;letter-spacing:.075em;text-transform:uppercase}.decoded-line{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;align-items:baseline;min-height:22px}.decoded-label{color:var(--muted);font-size:12px}.decoded-value{color:var(--ok);font-size:16px;font-weight:600;line-height:1.35;overflow-wrap:anywhere}.decoded-value span{font:inherit}.decoded-weather .hint{margin-top:0}.decoded-weather #autoIntensity{margin-top:2px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.small-note{color:var(--muted);font-size:12px;line-height:1.5}.session-update-note{margin-bottom:12px;font-size:13px;color:var(--muted)}
 @media(max-width:430px){.wrap{padding-left:12px;padding-right:12px;padding-top:max(14px,env(safe-area-inset-top))}header{margin-bottom:15px}.hot{font-size:62px}.group{margin-top:15px;padding-top:11px}.metric strong{font-size:12px}.sheet{max-height:90dvh}.sheet-body,.sheet-search{padding-left:14px;padding-right:14px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
@@ -64,6 +65,30 @@ input[data-temperature]{-moz-appearance:textfield}input[data-temperature]::-webk
 /* v15: Type I DSP numeric fields follow the same visual/input grammar as OAT and Skin. */
 #customDilution input.good{color:var(--ok);font-weight:600}
 #customDilution .unit-suffix{font-size:16px;font-weight:600}
+.dilution-info{margin:0 1px 2px;color:var(--muted)}
+.dilution-info summary{cursor:pointer;color:var(--accent);font-size:13px;line-height:1.4;list-style:none;padding:2px 0}
+.dilution-info summary::-webkit-details-marker{display:none}
+.dilution-info summary::before{content:'›';display:inline-block;margin-right:6px;transition:transform .15s ease}
+.dilution-info[open] summary::before{transform:rotate(90deg)}
+.dilution-info .hint{margin:7px 0 1px}
+
+/* v41: compact LT/UTC basis indicator and text-style UTC toggle. */
+#startTimeZoneSelect{font-weight:600}
+#startTimeZoneSelect.good{color:var(--ok)}
+.start-timezone-row{display:block;min-width:0;max-width:100%}
+.start-time-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px;min-width:0}
+.start-time-heading label{margin:0;min-width:0}
+.time-basis-toggle{display:flex;align-items:center;gap:2px;flex:0 0 auto}
+.time-basis-toggle button{background:transparent;border:0;border-radius:6px;color:var(--muted);padding:5px 10px;min-width:0;min-height:0;font-size:13px;font-weight:650;letter-spacing:0}
+.time-basis-toggle button[aria-pressed="true"]{background:var(--border);color:var(--text)}
+.time-basis-toggle button:focus,.time-basis-toggle button:focus-visible{outline:none;box-shadow:none}
+.start-time-input-wrap{position:relative;width:100%;min-width:0;max-width:100%;overflow:hidden;background:var(--field);border:1px solid var(--border);border-radius:var(--radius)}
+.start-time-input-wrap #startTime{display:block;inline-size:100%;width:100%;min-inline-size:0;min-width:0;max-inline-size:100%;max-width:100%;margin:0;border:0;border-radius:0;background:transparent;padding:11px 12px;outline:none;box-shadow:none}
+.start-time-input-wrap:focus-within{border-color:var(--muted)}
+.start-time-input-wrap:has(#startTime.invalid){border-color:var(--danger)!important}
+.sheet-body>.fields,.sheet-body>.primary,.sheet-body .field,.sheet-body .fields{min-width:0;max-width:100%;width:100%}
+.start-timezone-info-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;min-width:0;max-width:100%}
+.start-timezone-info-row .hint{flex:1;margin:0;min-width:0}
 
 /* v17: clearer, compact HOT session hierarchy. */
 .session-timer .eyebrow{font-size:13px;font-weight:750;letter-spacing:.10em}
@@ -86,6 +111,43 @@ input[data-temperature]{-moz-appearance:textfield}input[data-temperature]::-webk
   .session-details .detail strong{font-size:15px;max-width:67%}
   .session-fluid-name,.session-fluid-ratio{font-size:14px}
   .session-details .detail.compact strong{max-width:61%}
+}
+
+/* v47: status-first HOT Session hierarchy and in-session LT/UTC reference toggle. */
+.session-basis-row{display:flex;justify-content:flex-end;align-items:center;min-height:30px;margin:-2px 0 1px}
+.session-basis-toggle button{font-size:14px;padding:5px 10px}
+.session-timer{padding:4px 0 10px}
+.session-timer .hot{font-size:58px;margin:7px 0 5px}
+.session-fluidline{margin-top:0}
+.session-expiry{display:flex;align-items:baseline;justify-content:center;gap:8px;margin-top:10px;font-size:14px}
+.session-expiry span{color:var(--muted);text-transform:uppercase;font-size:12px;font-weight:700;letter-spacing:.06em}
+.session-expiry strong{font-size:17px;font-weight:750;font-variant-numeric:tabular-nums}
+.session-conditions{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:14px 2px 13px;margin:6px 0 12px}
+.session-conditions>.eyebrow{margin-bottom:8px}
+.session-condition-main{font-size:17px;font-weight:750;line-height:1.25;text-transform:uppercase}
+.session-condition-meta{margin-top:5px;color:var(--muted);font-size:14px;line-height:1.35;font-weight:600}
+.session-condition-meta strong{font-size:14px}
+.session-dot{color:var(--muted);padding:0 2px}
+.session-app-temp{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:7px;font-size:14px}
+.session-app-temp span{color:var(--muted)}
+.session-app-temp strong{font-size:15px;font-weight:750}
+.session-hot-summary{display:flex;flex-wrap:wrap;gap:5px 14px;margin:0 0 13px;color:var(--muted);font-size:13px;line-height:1.35}
+.session-hot-summary span+span::before{content:'·';margin-right:14px;color:var(--muted)}
+#sessionScreen #updateWeather{margin-top:1px}
+.session-end-wrap{text-align:center}
+#sessionScreen .session-end-link{margin:3px auto 1px;display:inline-flex;align-items:center;justify-content:center;width:auto;color:var(--accent);font-weight:500}
+#sessionScreen details{margin-top:4px}
+/* v48: restore the classic Session information layout; HOT EXPIRES leads the block. */
+.session-expiry-primary{padding:2px 0 11px;margin:0 0 11px;border-bottom:1px solid var(--border)}
+.session-expiry-primary span:first-child{font-weight:750}
+@media(max-width:430px){
+  .session-basis-row{min-height:28px}
+  .session-basis-toggle button{font-size:13.5px;padding:4px 9px}
+  .session-timer .hot{font-size:54px}
+  .session-expiry{margin-top:8px}
+  .session-condition-main{font-size:16px}
+  .session-hot-summary{font-size:12.5px;gap:4px 11px}
+  .session-hot-summary span+span::before{margin-right:11px}
 }
 </style>
 </head>
@@ -112,14 +174,14 @@ window.addEventListener('unhandledrejection', function(event) {
 </script>
 <section id="calcScreen" class="screen active" aria-label="Calculate">
 <form id="calcForm" novalidate>
-<div class="field"><label for="airport">Airport</label><button type="button" id="airport" class="picker" data-picker="airport" aria-haspopup="dialog"><span>Any airport</span></button><div class="hint" id="deicingLocation" hidden></div></div>
+<div class="field"><label class="sr-only" for="airport">Airport</label><button type="button" id="airport" class="picker" data-picker="airport" aria-haspopup="dialog"><span>Any airport</span></button><div class="hint" id="deicingLocation" hidden></div></div>
 <div class="group"><div class="group-heading"><span class="eyebrow">Weather</span><div class="mode" aria-label="Weather entry"><button type="button" id="modeManual" aria-pressed="true">MANUAL</button><button type="button" id="modeAuto" aria-pressed="false">AUTO</button></div></div>
 <div class="fields"><div id="metarWrap" hidden><label class="label" for="metarText">METAR / SPECI</label><div class="metar-controls"><textarea id="metarText" placeholder="Paste report" spellcheck="false" autocapitalize="characters"></textarea><button class="secondary" type="button" id="parseMetar">Apply</button></div><div id="metarMessage" class="hint danger" hidden></div><div id="metarAge" class="hint" hidden></div><div id="metarMismatch" class="hint danger" hidden></div></div><div id="autoDecoded" class="decoded-weather" hidden><div class="decoded-title">Decoded weather</div><div class="decoded-line"><span class="decoded-label">OAT</span><output class="decoded-value" id="autoOat" tabindex="-1"></output></div><div id="autoOatSign" class="hint amber" hidden>Check temperature sign</div><div class="decoded-line"><span class="decoded-label">Visibility</span><output class="decoded-value" id="autoVis" tabindex="-1"></output></div><div class="decoded-line"><span class="decoded-label">Precipitation</span><output id="autoPrecip" tabindex="-1" class="decoded-value"></output></div><div id="autoIntensity" class="hint" hidden></div><div id="autoProhibited" class="hint danger" hidden>Takeoff prohibited with this condition</div></div><div id="weatherFields"></div></div></div>
 <div class="group"><div class="group-heading"><span class="eyebrow">Fluid</span></div><div class="fields">
-<div class="field"><label for="fluid">Fluid</label><button type="button" id="fluid" class="picker placeholder" data-picker="fluid" aria-haspopup="dialog"><span>Search for fluid</span></button><div class="hint amber" id="similarWarning" hidden></div></div>
-<div class="field" id="actualFluidWrap" hidden><label for="actualFluid">Actual product · FAA LOUT</label><button type="button" id="actualFluid" class="picker placeholder" data-picker="actualFluid" aria-haspopup="dialog"><span>Select actual product</span></button></div>
-<div class="field concentration-row"><label for="ratio">Concentration</label><select id="ratio"><option value="">Select concentration</option></select></div>
-<div id="customDilution" class="fields" hidden><p id="customExplanation" class="hint"></p><div class="row" id="customDilutionRow"><div class="field" id="actualPercentField"><label for="actualPercent">Actual fluid %</label><div class="unit-field"><input id="actualPercent" type="text" data-integer-input="true" data-replace-value="true" placeholder="Enter fluid %" autocomplete="off" autocorrect="off" spellcheck="false"><span class="unit-suffix" id="actualPercentUnit" hidden>%</span><button type="button" class="numeric-display" id="actualPercentInvalid" data-numeric-target="actualPercent" hidden>Invalid fluid %</button></div><div id="actualPercentError" class="hint danger" hidden></div></div><div class="field" id="verifiedLoutField"><label for="verifiedLout">Verified dilution LOUT C</label><div class="unit-field"><input id="verifiedLout" type="text" data-temperature="true" data-replace-value="true" placeholder="Enter LOUT" autocomplete="off" autocorrect="off" spellcheck="false"><span class="unit-suffix" id="verifiedLoutUnit" hidden>C</span><button type="button" class="numeric-display" id="verifiedLoutInvalid" data-numeric-target="verifiedLout" hidden>Invalid LOUT</button></div><div id="verifiedLoutError" class="hint danger" hidden></div></div><div class="field" id="freezingPointField" hidden><label for="freezingPoint">Actual mixture freezing point C</label><div class="unit-field"><input id="freezingPoint" type="text" data-temperature="true" data-replace-value="true" placeholder="Enter freezing point" autocomplete="off" autocorrect="off" spellcheck="false"><span class="unit-suffix" id="freezingPointUnit" hidden>C</span><button type="button" class="numeric-display" id="freezingPointInvalid" data-numeric-target="freezingPoint" hidden>Invalid freezing point</button></div><div id="freezingPointError" class="hint danger" hidden></div></div></div><button type="button" class="link" id="customSourceToggle">LOUT unavailable? Use freezing point</button><p id="derivedLoutNote" class="hint" hidden>LOUT is derived as freezing point + 10 C.</p></div>
+<div class="field"><label class="sr-only" for="fluid">Fluid</label><button type="button" id="fluid" class="picker placeholder" data-picker="fluid" aria-haspopup="dialog"><span>Search for fluid</span></button><div class="hint amber" id="similarWarning" hidden></div></div>
+<div class="field" id="actualFluidWrap" hidden><label class="sr-only" for="actualFluid">Actual product · FAA LOUT</label><button type="button" id="actualFluid" class="picker placeholder" data-picker="actualFluid" aria-haspopup="dialog"><span>Select actual product</span></button></div>
+<div class="field concentration-row"><label class="sr-only" for="ratio">Concentration</label><select id="ratio"><option value="">Select concentration</option></select></div>
+<div id="customDilution" class="fields" hidden><details id="customExplanationDetails" class="dilution-info" hidden><summary>Dilution information</summary><p id="customExplanation" class="hint"></p></details><div class="row" id="customDilutionRow"><div class="field" id="actualPercentField"><label class="sr-only" for="actualPercent">Actual fluid %</label><div class="unit-field"><input id="actualPercent" type="text" data-integer-input="true" data-replace-value="true" placeholder="Enter fluid %" autocomplete="off" autocorrect="off" spellcheck="false"><span class="unit-suffix" id="actualPercentUnit" hidden>%</span><button type="button" class="numeric-display" id="actualPercentInvalid" data-numeric-target="actualPercent" hidden>Invalid concentration</button></div><div id="actualPercentError" class="hint danger" hidden></div></div><div class="field" id="verifiedLoutField"><label class="sr-only" for="verifiedLout">Verified dilution LOUT C</label><div class="unit-field"><input id="verifiedLout" type="text" data-temperature="true" data-replace-value="true" placeholder="Enter LOUT" autocomplete="off" autocorrect="off" spellcheck="false"><span class="unit-suffix" id="verifiedLoutUnit" hidden>C</span><button type="button" class="numeric-display" id="verifiedLoutInvalid" data-numeric-target="verifiedLout" hidden>Invalid LOUT</button></div><div id="verifiedLoutError" class="hint danger" hidden></div></div></div></div>
 </div></div>
 <button class="primary" id="calculateBtn" type="submit">Calculate HOT</button>
 </form>
@@ -127,10 +189,10 @@ window.addEventListener('unhandledrejection', function(event) {
 </section>
 <section id="sessionScreen" class="screen" aria-label="Session" tabindex="-1"><h2>HOT session</h2><div id="sessionContent"></div></section>
 <section id="settingsScreen" class="screen" aria-label="Settings" tabindex="-1"><h2>Settings</h2>
-<div class="row settings-item"><label for="theme">Appearance</label><select id="theme"><option value="dark">Dark</option><option value="light">Light</option></select></div>
+<div class="row settings-item"><label for="theme">Appearance</label><select id="theme"><option value="system">System</option><option value="dark">Dark</option><option value="light">Light</option></select></div>
 <div class="settings-item"><strong>About HOTmate</strong><p>Version 2.25.0 (1)</p><p>B737 · high-speed aerodynamic LOUT · predominantly aluminum surfaces · flaps/slats retracted.</p><p>For verification of your own calculations. Follow company procedures and the applicable approved documentation.</p></div>
 <details class="settings-item"><summary>Dataset &amp; sources</summary><p>Installed season: Winter 2025–2026.</p><p>HOT, snowfall intensity, application limits and relevant notes: CWOG appendixes and workbook. Fluid availability: CWOG Appendix E.</p><p>LOUT: FAA 2025–2026, original issue 12 August 2025. Tables 55, 56 and 58, high-speed C values. All 61 listed Type I products are included.</p><p>Airport names, cities and codes: embedded <a href="https://ourairports.com/data/" target="_blank" rel="noopener">OurAirports</a> public-domain snapshot, 14 September 2026.</p><p>Reference season is fixed; no live dataset updates or live weather feed.</p><div id="dataDetails"></div></details>
-<details class="settings-item"><summary>Reference limitations</summary><p>Specific products use FAA LOUT where available. For all Generic fluids, LOUT verification is optional in HOTmate: HOT may still be calculated with LOUT left blank, but the result carries a reminder to verify the actual fluid LOUT before use. Generic Type I uses the DSP-reported fluid concentration; a verified mixture LOUT may be entered, or, if available instead, the actual mixture freezing point may be entered and HOTmate derives LOUT as freezing point + 10 C. Generic Type II/IV use the selected HOT-table concentration and may accept a verified LOUT as a hard check. No dilution curve is inferred.</p><p>YD-101 and YD-101A are separate products. No standard FAA LOUT is borrowed between them.</p><p>Nordwing PG4 has an unresolved “O:04” source cell; that exact combination cannot produce a HOT.</p><p>Some station fluid names remain unresolved. Search the approved list and select the actual product.</p><p>Published test-expiry annotations remain in the source qualification records. This historical prototype does not establish current fluid qualification.</p></details>
+<details class="settings-item"><summary>Reference limitations</summary><p>Specific products use FAA LOUT where available. For all Generic fluids, LOUT verification is optional in HOTmate: HOT may still be calculated with LOUT left blank, but the result carries a reminder to verify the actual fluid LOUT before use. Generic Type I uses the DSP-reported fluid concentration and may accept a verified mixture LOUT as a hard check. Generic Type II/IV use the selected HOT-table concentration and may accept a verified LOUT as a hard check. HOTmate does not derive or calculate LOUT from freezing point data.</p><p>YD-101 and YD-101A are separate products. No standard FAA LOUT is borrowed between them.</p><p>Nordwing PG4 has an unresolved “O:04” source cell; that exact combination cannot produce a HOT.</p><p>Some station fluid names remain unresolved. Search the approved list and select the actual product.</p><p>Published test-expiry annotations remain in the source qualification records. This historical prototype does not establish current fluid qualification.</p></details>
 <div id="storageMessage" class="hint amber" hidden>Browser storage is unavailable. Keep this page open to retain the session.</div>
 </section>
 </main>
@@ -159,18 +221,24 @@ const Conditions = (() => {
   }
   for(const [prefix,word,intensity] of [['-','Light ','light'],['','','moderate'],['+','Heavy ','heavy']])add(prefix+'FZDZ',word?word+'freezing drizzle':'Freezing drizzle',prefix+'FZDZ','fzdz',intensity);
   for(const [prefix,word,intensity] of [['-','Light ','light'],['','Moderate ','moderate'],['+','Heavy ','heavy']])add(prefix+'FZRA',word+'freezing rain',prefix+'FZRA','fzra',intensity);
-  add('-SNRA','Light snow mixed with rain','-SNRA','snowrain','light');
-  add('-SNDZ','Light snow mixed with drizzle','-SNDZ','snowdrizzle','light');
-  add('SNRA','Snow mixed with rain','SNRA','unsupported');
-  add('SNDZ','Snow mixed with drizzle','SNDZ','unsupported');
+  add('-SNRA','Light snow mixed with light rain','-SNRA','snowrain','light');
+  add('SNRA','Moderate snow/rain mixture','SNRA','snowrain','moderate');
+  add('+SNRA','Heavy snow/rain mixture','+SNRA','snowrain','heavy');
+  add('-SNDZ','Light snow mixed with light drizzle','-SNDZ','snowdrizzle','light');
+  add('SNDZ','Moderate snow/drizzle mixture','SNDZ','snowdrizzle','moderate');
+  add('+SNDZ','Heavy snow/drizzle mixture','+SNDZ','snowdrizzle','heavy');
   add('-RA','Light rain on cold-soaked wing','-RA','rain','light');
   add('RA','Rain on cold-soaked wing','RA','rain');
-  add('PL','Ice pellets','PL','unsupported');add('GR','Hail / small hail','GR','unsupported');
-  add('other','Other unsupported combination','other','unsupported');
+  add('PL','Ice pellets','PL','prohibited');add('GR','Hail / small hail','GR','prohibited');
+  add('other','Unsupported precipitation condition','manual review','unsupported','—');
   add('none','No precipitation','NSW','none','—');
   const snowy=p=>['snow','snowfog','snowcrystals','snowrain','snowdrizzle'].includes(p?.family);
-  const prohibited=p=>['PL','GR','FZRA','+FZRA'].includes(p?.id)||(snowy(p)&&p.reported==='heavy');
-  return {items,get:id=>items.find(p=>p.id===id),snowy,prohibited,needsSnow:p=>snowy(p)&&!prohibited(p)};
+  const noHot=p=>['snowrain','snowdrizzle'].includes(p?.family)&&p.reported!=='light';
+  // Reported heavy falling-snow conditions and PL/GR are hard NO-HOT conditions.
+  // Their intensity must not be downgraded through the visibility-based snowfall table.
+  const prohibited=p=>['PL','GR','FZRA','+FZRA'].includes(p?.id)||(['snow','snowfog','snowcrystals'].includes(p?.family)&&p.reported==='heavy');
+  const needsSnow=p=>snowy(p)&&!prohibited(p)&&!noHot(p);
+  return {items,get:id=>items.find(p=>p.id===id),snowy,noHot,prohibited,needsSnow};
 })();
 
 // Generic fluids use generic HOT tables. Product-specific LOUT is therefore entered manually.
@@ -239,46 +307,32 @@ const Validation = (() => {
   }
   function genericTypeIErrors(x){
     if(x.selection!=='generic-I')return {};
-    const errors={},t=Math.min(x.oat,x.skin);
+    const errors={};
     if(!Number.isInteger(x.actualPercent)||x.actualPercent<1||x.actualPercent>100)errors.actualPercent='Enter whole-number fluid concentration from 1 to 100%';
     // Generic Type I follows the same soft-LOUT philosophy as Generic II/IV.
-    // Leaving the selected LOUT source blank does not block HOT calculation;
-    // once a value is supplied, it becomes a hard operational check.
-    if(x.customLoutMode==='fp'){
-      if(!x.freezingPointEntered)return errors;
-      if(!Number.isInteger(x.freezingPoint)||x.freezingPoint< -54||x.freezingPoint>54)errors.freezingPoint='Enter integer freezing point from −54 to +54 C';
-      else if(Number.isFinite(t)&&x.freezingPoint>t-10)errors.freezingPoint=`Freezing point must be ${t-10} C or colder`;
-    }else{
-      if(!x.verifiedLoutEntered)return errors;
-      if(!Number.isInteger(x.verifiedLout)||x.verifiedLout< -54||x.verifiedLout>54)errors.verifiedLout='Enter integer verified LOUT from −54 to +54 C';
-      else if(Number.isFinite(t)&&x.verifiedLout>t)errors.verifiedLout=`Verified LOUT must be ${t} C or colder`;
-    }
+    // HOTmate never derives LOUT. Leaving verified LOUT blank does not block HOT;
+    // once a verified value is supplied, it becomes a hard operational check.
+    if(!x.verifiedLoutEntered)return errors;
+    if(!Number.isInteger(x.verifiedLout)||x.verifiedLout< -54||x.verifiedLout>54)errors.verifiedLout='Enter integer verified LOUT from −54 to +54 C';
     return errors;
   }
   function genericThickenedErrors(x){
     const type=genericType(x.selection);
     if(type!=='II'&&type!=='IV')return {};
-    const errors={},t=Math.min(x.oat,x.skin);
+    const errors={};
     // Generic Type II/IV may be calculated without entering LOUT. If the user
     // does enter one, it becomes a hard operational check.
     if(!x.verifiedLoutEntered)return errors;
     if(!Number.isInteger(x.verifiedLout)||x.verifiedLout< -54||x.verifiedLout>54)errors.verifiedLout='Enter integer verified LOUT from −54 to +54 C';
-    else if(Number.isFinite(t)&&x.verifiedLout>t)errors.verifiedLout=`Verified LOUT must be ${t} C or colder`;
     return errors;
   }
   function customErrors(x){
     if(x.ratio!=='custom')return {};
-    const f=DATA.fluids.find(f=>f.id===x.fluidId),errors={},max=maxConcentration(f),t=Math.min(x.oat,x.skin);
+    const f=DATA.fluids.find(f=>f.id===x.fluidId),errors={},max=maxConcentration(f);
     if(f?.type!=='I')return {ratio:'Other dilution is available for Type I only'};
     if(max===null)errors.actualPercent='The source gives no numerical maximum concentration for this as-supplied product';
-    else if(!Number.isInteger(x.actualPercent)||x.actualPercent<=0||x.actualPercent>max)errors.actualPercent=`Actual fluid % must be a whole number from 1 to ${max}%`;
-    if(x.customLoutMode==='fp'){
-      if(!Number.isInteger(x.freezingPoint)||x.freezingPoint< -54||x.freezingPoint>54)errors.freezingPoint='Enter integer freezing point from −54 to +54 C';
-      else if(Number.isFinite(t)&&x.freezingPoint>t-10)errors.freezingPoint=`Freezing point must be ${t-10} C or colder`;
-    }else{
-      if(!Number.isInteger(x.verifiedLout)||x.verifiedLout< -54||x.verifiedLout>54)errors.verifiedLout='Enter integer verified LOUT from −54 to +54 C';
-      else if(Number.isFinite(t)&&x.verifiedLout>t)errors.verifiedLout=`Verified LOUT must be ${t} C or colder`;
-    }
+    else if(!Number.isInteger(x.actualPercent)||x.actualPercent<=0||x.actualPercent>max)errors.actualPercent=`Fluid concentration must be a whole number from 1 to ${max}%`;
+    if(!Number.isInteger(x.verifiedLout)||x.verifiedLout< -54||x.verifiedLout>54)errors.verifiedLout='Enter integer verified LOUT from −54 to +54 C';
     return errors;
   }
   return {number,integer,visibility,metarVisibility,errors,customErrors,genericTypeIErrors,genericThickenedErrors,maxConcentration};
@@ -294,12 +348,21 @@ const Engine = (() => {
   });
   const selectedFluid=x=>{const type=genericType(x?.selection);return type?genericFluids[type]||null:fluid(x?.fluidId)};
   const inBand=(t,b)=>(b.min===null||t>=b.min)&&(b.max===null||t<b.max);
-  const manualTypeILout=x=>x.customLoutMode==='fp'?(Number.isFinite(x.freezingPoint)?x.freezingPoint+10:null):(Number.isFinite(x.verifiedLout)?x.verifiedLout:null);
+  const manualTypeILout=x=>Number.isFinite(x.verifiedLout)?x.verifiedLout:null;
   const lout=x=>{const type=genericType(x.selection);if(type==='I')return manualTypeILout(x);if(type==='II'||type==='IV')return Number.isFinite(x.verifiedLout)?x.verifiedLout:null;return x.ratio==='custom'&&fluid(x.fluidId)?.type==='I'?manualTypeILout(x):fluid(x.fluidId)?.concentrations.find(c=>c.ratio===x.ratio)?.lout??null};
   function snow(vis,oat,period){
     if(!Number.isFinite(vis)||vis<0||!Number.isFinite(oat)||!['day','night'].includes(period))return null;
     const row=DATA.snow.find(r=>r.upper===null||vis<=r.upper),col=(period==='night'?2:0)+(oat> -1?1:0);
     return {intensity:row.values[col],ref:`Table 4!${['D','E','F','G'][col]}${row.row}`};
+  }
+  function belowLoutReason(x,lout,verified=false){
+    const below=[];
+    if(Number.isFinite(x.oat)&&x.oat<lout)below.push(`OAT ${x.oat} C`);
+    if(Number.isFinite(x.skin)&&x.skin<lout)below.push(`Skin temperature ${x.skin} C`);
+    const limit=verified?'verified LOUT':'fluid LOUT';
+    if(below.length===2)return `${below[0]} and ${below[1]} are below ${limit} ${lout} C.`;
+    if(below.length===1)return `${below[0]} is below ${limit} ${lout} C.`;
+    return `Application temperature is below ${limit} ${lout} C.`;
   }
   function calculate(x){
     const f=selectedFluid(x),p=Conditions.get(x.precip),t=Math.min(x.oat,x.skin),gType=genericType(x.selection),genericI=gType==='I',generic=!!gType;
@@ -316,25 +379,27 @@ const Engine = (() => {
     else if(!f.concentrations.some(c=>c.ratio===x.ratio))return fail('No FAA LOUT exists for the selected fluid and concentration.');
     const softGenericLout=generic&&base.lout===null;
     if(base.lout===null&&!softGenericLout)return fail(f.loutIssue||'No verified FAA LOUT exists for the selected product and concentration.');
-    if(Number.isFinite(base.lout)&&t<base.lout){notes.push(genericI?'LOUT is the user-entered verified value for the actual Type I mixture (or derived from its freezing point + 10 C).':generic?'LOUT is the user-entered verified value for the actual fluid and concentration.':'LOUT uses the FAA high-speed aerodynamic acceptance value for the selected product and dilution.');return fail(`Application temperature ${t} C is below fluid LOUT ${base.lout} C.`);}
+    if(Number.isFinite(base.lout)&&t<base.lout){notes.push(genericI?'LOUT is the user-entered verified value for the actual Type I mixture.':generic?'LOUT is the user-entered verified value for the actual fluid and concentration.':custom?'LOUT is the user-entered verified value for the actual Type I dilution.':'LOUT uses the FAA high-speed aerodynamic acceptance value for the selected product and dilution.');return fail(belowLoutReason(x,base.lout,generic||custom));}
     if(f.type!=='I'&&((x.ratio==='50/50'&&t< -3)||(x.ratio==='75/25'&&t< -14))){
       const limit=x.ratio==='50/50'?-3:-14;
       notes.push(`The application guideline limits ${x.ratio} to ${limit} C and warmer, independently of FAA LOUT.`);
       return fail(`Application temperature ${t} C is below the ${x.ratio} application limit of ${limit} C.`);
     }
+    if(Conditions.noHot(p))return fail(`No HOT exists for ${p.label}.`);
     if(Conditions.prohibited(p))return fail(`Takeoff prohibited with ${p.label}.`);
-    const sn=Conditions.snowy(p)?snow(x.vis,x.oat,x.period):null;
-    if(Conditions.snowy(p)){
+    if(p.family==='unsupported')return fail('Unsupported precipitation condition; HOT cannot be determined. Manual review required.');
+    const sn=Conditions.needsSnow(p)?snow(x.vis,x.oat,x.period):null;
+    if(Conditions.needsSnow(p)){
       notes.push('Snowfall intensity is determined from reported visibility, day/night and OAT. Use official surface visibility when available; RVR is not permitted.');
       if(!sn)return fail('Required snowfall intensity cannot be determined from the available inputs.');
       base.intensity=sn.intensity;base.snowRef=sn.ref;
       if(sn.intensity==='heavy')return fail(`Takeoff prohibited: HOT snowfall intensity is HEAVY.`);
       if(['snowrain','snowdrizzle'].includes(p.family)&&sn.intensity==='moderate')return fail('No HOT exists for snow mixed with rain/drizzle when visibility indicates MODERATE snowfall.');
     }
-    if(p.family==='unsupported'||(p.family==='fzra'&&p.reported!=='light'))return fail(`No HOT exists for ${p.label}.`);
+    if(p.family==='fzra'&&p.reported!=='light')return fail(`No HOT exists for ${p.label}.`);
     if(p.family==='none')return fail('No new HOT is calculated without precipitation or active frost.');
     if(p.family==='mist'&&x.oat>0)return fail('Observed freezing mist requires OAT at or below 0 C.');
-    if(f.type==='I')notes.push(genericI?(base.lout===null?'Generic Type I HOT applies. Fluid LOUT was not verified in HOTmate and must be checked before use.':x.customLoutMode==='fp'?'Generic Type I HOT applies. LOUT is derived from the actual mixture freezing point using the 10 C Type I buffer.':'Generic Type I HOT applies. LOUT is the manually verified value for the actual mixture.'):custom?(x.customLoutMode==='fp'?'Generic Type I HOT applies. Dilution LOUT is derived from the entered actual mixture freezing point using the 10 C Type I buffer.':'Generic Type I HOT applies. Dilution LOUT is the manually verified DSP value.'):'Generic Type I HOT applies to predominantly aluminum surfaces. The FAA LOUT includes the freezing-point buffer for the listed dilution; another dilution requires its own verified data.');
+    if(f.type==='I')notes.push(genericI?(base.lout===null?'Generic Type I HOT applies. Fluid LOUT was not verified in HOTmate and must be checked before use.':'Generic Type I HOT applies. LOUT is the manually verified value for the actual mixture.'):custom?'Generic Type I HOT applies. Dilution LOUT is the manually verified DSP value.':'Generic Type I HOT applies to predominantly aluminum surfaces. The FAA LOUT includes the freezing-point buffer for the listed dilution; another dilution requires its own verified data.');
     else if(generic)notes.push(base.lout===null?`Generic Type ${f.type} HOT applies. Fluid LOUT was not verified in HOTmate and must be checked before use.`:`Generic Type ${f.type} HOT applies. LOUT is the manually verified value for the actual fluid and concentration.`);
     let tableKey=p.family==='frost'?'Table 7':f.type==='I'?'Table 6':x.selection===`generic-${f.type}`?(f.type==='II'?'Table 20':'Table 51'):f.table;
     if(!tableKey)return fail('No verified HOT table matches the selected product.');
@@ -351,8 +416,8 @@ const Engine = (() => {
       }else if(p.family==='snowfog'){key=`snowfog_${base.intensity==='moderate'?'moderate':'light'}`;notes.push('Snow mixed with freezing fog requires snowfall intensity no greater than moderate.');}
       else if(['snowrain','snowdrizzle'].includes(p.family)){key='fzra_light';notes.push('Very light or light snow mixed with rain/drizzle uses light freezing rain HOT; snowfall intensity must not exceed light.');}
       else if(p.family==='fzdz'){
-        key=x.drizzleIdentified?`fzdz_${p.reported==='light'?'light':'moderate'}`:'fzra_light';
-        if(!x.drizzleIdentified)notes.push('Freezing drizzle is not positively identified; light freezing rain HOT is used.');
+        key=`fzdz_${p.reported==='light'?'light':'moderate'}`;
+        notes.push('If freezing drizzle cannot be positively identified, use light freezing rain HOT.');
       }else if(p.family==='fzra')key='fzra_light';
       else if(p.family==='rain'){
         const limit=f.type==='I'?-10:0;
@@ -360,7 +425,7 @@ const Engine = (() => {
         if(f.type==='I'?t<limit:t<=limit)return fail(`No rain-on-cold-soaked-wing HOT exists ${f.type==='I'?'below −10 C':'at 0 C and below'}.`);
         key=`rain_${p.reported}`;
       }else key='fzfg';
-      if(p.family==='mist')notes.push('Freezing mist must be confirmed by observation; it is not reported as freezing mist in METAR.');
+      if(p.family==='mist')notes.push('Freezing mist is never reported by METAR; however, it can occur when mist is present at 0 C and below.');
       cell=row?.cells[key];
     }
     const trace={tableKey,cellRef:cell?.ref,rawValue:cell?.raw,column:key,fluidId:f.id,type:f.type,ratio:x.ratio};
@@ -371,13 +436,116 @@ const Engine = (() => {
       return fail(raw==='O:04'?'The source HOT value for this combination is ambiguous.':`No HOT value exists for the selected fluid / concentration / temperature combination.`,trace);
     }
     if(cell.minutes<10)notes.push('HOT under 10 minutes may be insufficient to complete all required procedures.');
+    notes.push('The lower of OAT and aircraft skin temperature is used as the application temperature.');
     return {...base,...trace,minutes:cell.minutes,status:'valid',short:cell.minutes<10,reason:null};
   }
   return {calculate,snow,inBand,fluid,selectedFluid,lout};
 })();
 
-// METAR INTERPRETATION — explicit parse action, no network dependency.
+// METAR INTERPRETATION — v52 normalization/safety mapping; explicit parse action, no network dependency.
 const Weather = (()=>{
+  const WX_CODES=new Set(['MI','PR','BC','DR','BL','SH','TS','FZ','DZ','RA','SN','SG','IC','PL','GR','GS','UP','BR','FG','FU','VA','DU','SA','HZ','PY','SQ','FC','SS','DS']);
+  const intensityRank=prefix=>prefix==='+'?2:prefix===''?1:0;
+  const prefixFrom=items=>{
+    if(!items.length)return '';
+    const rank=Math.max(...items.map(item=>intensityRank(item.prefix)));
+    return rank===2?'+':rank===1?'':'-';
+  };
+  function splitWxToken(token){
+    const raw=String(token||'').toUpperCase();let body=raw,prefix='';
+    if(body[0]==='+'||body[0]==='-'){prefix=body[0];body=body.slice(1);}
+    if(!body||body.length%2)return null;
+    const codes=[];
+    for(let i=0;i<body.length;i+=2){const code=body.slice(i,i+2);if(!WX_CODES.has(code))return null;codes.push(code);}
+    return {raw,prefix,codes};
+  }
+  function analyze(groups,{dropTS=false}={}){
+    const fallingSnow=[],normalRain=[],normalDrizzle=[],freezingRain=[],freezingDrizzle=[],iceCrystals=[];
+    let frozenFog=false,groundSnow=false,hasTS=false,hasPL=false,hasGR=false,hasUP=false;
+    for(const group of groups){
+      const codes=group.codes.filter(code=>code!=='SH'&&(!dropTS||code!=='TS'));
+      if(codes.includes('TS'))hasTS=true;
+      for(let i=0;i<codes.length;i++){
+        const code=codes[i],prev=codes[i-1]||'',item={prefix:group.prefix,raw:group.raw};
+        if(code==='PL')hasPL=true;
+        else if(code==='GR')hasGR=true;
+        else if(code==='UP')hasUP=true;
+        else if(code==='FG'&&prev==='FZ')frozenFog=true;
+        else if(code==='RA'){
+          if(prev==='FZ')freezingRain.push(item);else normalRain.push(item);
+        }else if(code==='DZ'){
+          if(prev==='FZ')freezingDrizzle.push(item);else normalDrizzle.push(item);
+        }else if(code==='IC')iceCrystals.push(item);
+        else if(code==='SN'||code==='SG'||code==='GS'){
+          if(prev==='BL'||prev==='DR')groundSnow=true;
+          else fallingSnow.push({...item,kind:code});
+        }
+      }
+    }
+    return {fallingSnow,normalRain,normalDrizzle,freezingRain,freezingDrizzle,iceCrystals,frozenFog,groundSnow,hasTS,hasPL,hasGR,hasUP};
+  }
+  function classify(groups,{dropTS=false}={}){
+    const a=analyze(groups,{dropTS});
+    // PL and GR are always prohibited, regardless of SH/TS or any companion descriptor.
+    if(a.hasPL)return {precip:'PL',detail:groups.map(g=>g.raw).join(' ')};
+    if(a.hasGR)return {precip:'GR',detail:groups.map(g=>g.raw).join(' ')};
+    // UP/FZUP are never guessed into a HOT family.
+    if(a.hasUP)return {precip:'other',detail:groups.map(g=>g.raw).join(' ')};
+    // TS must be evaluated, never silently stripped. Only an already hard-NO-HOT
+    // underlying condition is allowed to pass through; otherwise it requires manual review.
+    if(a.hasTS&&!dropTS){
+      const underlying=classify(groups,{dropTS:true}),p=Conditions.get(underlying.precip);
+      if(p&&(Conditions.prohibited(p)||Conditions.noHot(p)))return {...underlying,detail:groups.map(g=>g.raw).join(' ')};
+      return {precip:'other',detail:groups.map(g=>g.raw).join(' ')};
+    }
+    const snow=a.fallingSnow,types=[...new Set(snow.map(s=>s.kind))];
+    // Falling snow mixed with freezing drizzle/rain has no explicit supported mapping.
+    if(snow.length&&(a.freezingRain.length||a.freezingDrizzle.length))return {precip:'other',detail:groups.map(g=>g.raw).join(' ')};
+    // BLSN/DRSN alone is not active falling snowfall. If another unrelated precipitation
+    // accompanies it without falling SN/SG/GS, the combination is still not inferred.
+    if(a.groundSnow&&!snow.length)return {precip:'other',detail:groups.map(g=>g.raw).join(' ')};
+    if(snow.length){
+      if(types.length!==1)return {precip:'other',detail:groups.map(g=>g.raw).join(' ')};
+      const kind=types[0],snowPrefix=prefixFrom(snow);
+      const hasRain=a.normalRain.length>0,hasDrizzle=a.normalDrizzle.length>0;
+      const extraFrozen=a.freezingRain.length||a.freezingDrizzle.length;
+      if(extraFrozen||hasRain&&hasDrizzle)return {precip:'other',detail:groups.map(g=>g.raw).join(' ')};
+      if(hasRain||hasDrizzle){
+        // Only the explicitly supported SN + light RA/DZ mixture may use a HOT.
+        if(kind!=='SN'||a.frozenFog||a.iceCrystals.length)return {precip:'other',detail:groups.map(g=>g.raw).join(' ')};
+        const companion=hasRain?a.normalRain:a.normalDrizzle;
+        const mixPrefix=prefixFrom([...snow,...companion]);
+        const suffix=hasRain?'RA':'DZ';
+        return {precip:(mixPrefix==='-'?'-':mixPrefix==='+'?'+':'')+'SN'+suffix,detail:groups.map(g=>g.raw).join(' ')};
+      }
+      if(a.frozenFog){
+        if(kind!=='SN'||a.iceCrystals.length)return {precip:'other',detail:groups.map(g=>g.raw).join(' ')};
+        return {precip:snowPrefix+'SNFZFG',detail:groups.map(g=>g.raw).join(' ')};
+      }
+      if(a.iceCrystals.length){
+        if(kind!=='SN')return {precip:'other',detail:groups.map(g=>g.raw).join(' ')};
+        return {precip:snowPrefix+'SN IC',detail:groups.map(g=>g.raw).join(' ')};
+      }
+      return {precip:snowPrefix+kind,detail:groups.map(g=>g.raw).join(' ')};
+    }
+    // No falling snow from here on. Keep existing standalone precipitation mappings,
+    // but never guess unsupported compound precipitation.
+    const active=[];
+    for(const item of a.freezingRain)active.push({kind:'FZRA',...item});
+    for(const item of a.freezingDrizzle)active.push({kind:'FZDZ',...item});
+    for(const item of a.normalRain)active.push({kind:'RA',...item});
+    for(const item of a.normalDrizzle)active.push({kind:'DZ',...item});
+    for(const item of a.iceCrystals)active.push({kind:'IC',...item});
+    if(active.length>1)return {precip:'other',detail:groups.map(g=>g.raw).join(' ')};
+    if(active.length===1){
+      const item=active[0];
+      if(item.kind==='IC')return {precip:a.frozenFog?'fogcrystals':'crystals',detail:groups.map(g=>g.raw).join(' ')};
+      const id=item.prefix+item.kind;
+      return {precip:Conditions.get(id)?.id||'other',detail:groups.map(g=>g.raw).join(' ')};
+    }
+    if(a.frozenFog)return {precip:'fzfg',detail:groups.map(g=>g.raw).join(' ')};
+    return {precip:null,detail:groups.map(g=>g.raw).join(' ')};
+  }
   function parse(raw){
     const text=raw.trim().toUpperCase(),body=text.split(/\b(?:TEMPO|BECMG|RMK)\b/)[0];
     if(!body)return {error:'Paste a METAR or SPECI.'};
@@ -391,28 +559,13 @@ const Weather = (()=>{
     else {const v=body.match(/(?:^|\s)(\d{4})(?:NDV)?(?=\s|$)/);if(v)x.vis=Number(v[1]);}
     const surface=text.match(/\bRMK\b.*?\bSFC VIS ([MP]?(?:\d+\s+)?\d+(?:\/\d+|\.\d+)?)(?:\s|$)/);
     if(surface)x.vis=Validation.metarVisibility(surface[1].trim().replace(/^[MP]/,'')+'SM');
-    const wx=body.split(/\s+/).filter(t=>/^(?:[-+])?(?:(?:MI|PR|BC|DR|BL|SH|TS|FZ)?(?:DZ|RA|SN|SG|IC|PL|GR|GS|UP|BR|FG|FU|VA|DU|SA|HZ|PY|SQ|FC|SS|DS))+$/.test(t));
-    const precip=wx.filter(t=>/(?:SN|SG|GS|RA|DZ|PL|GR|IC|UP)/.test(t)&&!/^[-+]?(BL|DR)(SN|SG)$/.test(t));
-    const frozenFog=wx.includes('FZFG'),sn=precip.filter(t=>/(SN|SG|GS)/.test(t)),pl=precip.some(t=>/PL/.test(t)),hail=precip.some(t=>/GR/.test(t));
-    const joined=precip.join(' '),snow=sn[0],prefix=snow?.startsWith('-')?'-':snow?.startsWith('+')?'+':'';
-    if(pl)x.precip='PL';else if(hail)x.precip='GR';
-    else if(sn.length){
-      if(/FZRA|FZDZ|UP|SH|TS/.test(joined))x.precip='other';
-      else if(/RA|DZ/.test(joined)){
-        const mixed=/(RA)/.test(joined)?'RA':'DZ';
-        const light=prefix==='-'&&precip.filter(t=>/RA|DZ/.test(t)).every(t=>t.startsWith('-'));
-        x.precip=light?'-SN'+mixed:'SN'+mixed;
-      }else if(frozenFog)x.precip=prefix+'SNFZFG';
-      else if(/IC/.test(joined))x.precip=prefix+'SN IC';
-      else x.precip=prefix+(snow.match(/SN|SG|GS/)?.[0]||'SN');
-    }else if(precip.length===1){
-      const t=precip[0];x.precip=Conditions.get(t)?.id||'other';
-      if(t==='IC')x.precip=frozenFog?'fogcrystals':'crystals';
-    }else if(precip.length>1)x.precip='other';
-    else if(frozenFog)x.precip='fzfg';
-    else if(wx.includes('BR')&&x.oat<=0)x.precip='';
+    const wxRaw=body.split(/\s+/).filter(t=>/^(?:[-+])?(?:(?:MI|PR|BC|DR|BL|SH|TS|FZ)?(?:DZ|RA|SN|SG|IC|PL|GR|GS|UP|BR|FG|FU|VA|DU|SA|HZ|PY|SQ|FC|SS|DS))+$/.test(t));
+    const groups=wxRaw.map(splitWxToken).filter(Boolean),classification=classify(groups);
+    if(classification.precip)x.precip=classification.precip;
+    else if(wxRaw.some(t=>/FZFG/.test(t)))x.precip='fzfg';
+    else if(wxRaw.includes('BR')&&x.oat<=0)x.precip='';
     else x.precip='none';
-    if(x.precip==='other')x.conditionDetail=joined;
+    if(x.precip==='other'||classification.detail)x.conditionDetail=classification.detail;
     x.timestamp=body.match(/\b(\d{6})Z\b/)?.[1]||null;
     return x;
   }
@@ -434,49 +587,152 @@ const Weather = (()=>{
     if(x.error||!x.station||!Number.isInteger(x.oat)||!Number.isFinite(x.vis)||!Conditions.get(x.precip))return {error:'METAR could not be parsed'};
     return {...x,observedAt:reportTime(x.timestamp)};
   }
-  return {parse,decode,reportTime};
+  function regressionTests(){
+    const metar=weather=>`METAR UUEE 010000Z 00000KT 1600 ${weather} M06/M08 Q1000`;
+    const cases=[
+      ['SHSN','SN',false,false,false],['-SHSN','-SN',false,false,false],['+SHSN','+SN',true,false,false],
+      ['SHSG','SG',false,false,false],['SHGS','GS',false,false,false],
+      ['BLSN','other',false,true,false],['DRSN','other',false,true,false],['SN BLSN','SN',false,false,false],
+      ['RASN','SNRA',false,false,true],['DZSN','SNDZ',false,false,true],
+      ['TSSN','other',false,true,false],['TSPL','PL',true,false,false],
+      ['UP','other',false,true,false],['FZUP','other',false,true,false],
+      ['SNFZDZ','other',false,true,false],['SNFZRA','other',false,true,false],
+      ['SHGR','GR',true,false,false],['SHPL','PL',true,false,false]
+    ];
+    const results=cases.map(([weather,expected,prohibited,unsupported,noHot])=>{
+      const parsed=parse(metar(weather)),p=Conditions.get(parsed.precip);
+      const actualProhibited=!!p&&Conditions.prohibited(p),actualUnsupported=p?.family==='unsupported',actualNoHot=!!p&&Conditions.noHot(p);
+      return {weather,expected,actual:parsed.precip,pass:parsed.precip===expected&&actualProhibited===prohibited&&actualUnsupported===unsupported&&actualNoHot===noHot};
+    });
+    return {ok:results.every(r=>r.pass),results};
+  }
+  return {parse,decode,reportTime,regressionTests};
+})();
+
+// TIME ZONES — operational LT is derived from an absolute timestamp plus airport IANA zone.
+// This keeps HOT/session times correct even when the device itself is set to another time zone.
+const AIRPORT_TIMEZONES=Object.freeze({
+  EPKK:'Europe/Warsaw',EPPO:'Europe/Warsaw',EPWA:'Europe/Warsaw',EVRA:'Europe/Riga',EYVI:'Europe/Vilnius',
+  LATI:'Europe/Tirane',LBSF:'Europe/Sofia',LDZA:'Europe/Zagreb',LFSB:'Europe/Paris',LHBP:'Europe/Budapest',
+  LIME:'Europe/Rome',LIRN:'Europe/Rome',LIRP:'Europe/Rome',LJLJ:'Europe/Ljubljana',LKPR:'Europe/Prague',
+  LOWS:'Europe/Vienna',LQSA:'Europe/Sarajevo',LRIA:'Europe/Bucharest',LROP:'Europe/Bucharest',
+  LTAC:'Europe/Istanbul',LTFJ:'Europe/Istanbul',LTFM:'Europe/Istanbul',LUKK:'Europe/Chisinau',LYBE:'Europe/Belgrade',
+  OAKB:'Asia/Kabul',OIFM:'Asia/Tehran',OIIE:'Asia/Tehran',OIKK:'Asia/Tehran',OIMM:'Asia/Tehran',OISS:'Asia/Tehran',OITT:'Asia/Tehran',
+  OJAI:'Asia/Amman',ORER:'Asia/Baghdad',ORSJ:'Asia/Baghdad',OSDI:'Asia/Damascus',
+  UAAA:'Asia/Almaty',UACC:'Asia/Almaty',UAII:'Asia/Almaty',UBBB:'Asia/Baku',UCFM:'Asia/Bishkek',
+  UDYZ:'Asia/Yerevan',UGTB:'Asia/Tbilisi',ULLI:'Europe/Moscow',UMMS:'Europe/Minsk',UNNT:'Asia/Novosibirsk',
+  URML:'Europe/Moscow',URMM:'Europe/Moscow',URSS:'Europe/Moscow',URWW:'Europe/Volgograd',USSS:'Asia/Yekaterinburg',
+  UTAA:'Asia/Ashgabat',UTDD:'Asia/Dushanbe',UUWW:'Europe/Moscow',UWKD:'Europe/Moscow',UWUU:'Asia/Yekaterinburg',
+  UWWW:'Europe/Samara',UZSS:'Asia/Tashkent',UZTT:'Asia/Tashkent',VNKT:'Asia/Kathmandu'
+});
+const TimeZones=(()=>{
+  const device=()=>{try{return Intl.DateTimeFormat().resolvedOptions().timeZone||'UTC'}catch{return 'UTC'}};
+  const airport=icao=>AIRPORT_TIMEZONES[icao]||null;
+  const formatterCache=new Map();
+  const FIXED_RE=/^UTC([+-])(\d{2}):(\d{2})$/;
+  const FIXED_OFFSETS=[-720,-660,-600,-570,-540,-480,-420,-360,-300,-240,-210,-180,-150,-120,-60,0,60,120,180,210,240,270,300,330,345,360,390,420,480,525,540,570,600,630,660,720,765,780,825,840];
+  function fixedMinutes(tz){
+    if(tz==='UTC')return 0;
+    const m=String(tz||'').match(FIXED_RE);if(!m)return null;
+    const n=Number(m[2])*60+Number(m[3]);return m[1]==='-'?-n:n;
+  }
+  function fixedId(minutes){
+    if(minutes===0)return 'UTC';
+    const sign=minutes<0?'-':'+',a=Math.abs(minutes),h=Math.floor(a/60),m=a%60;
+    return `UTC${sign}${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
+  }
+  function formatter(tz){
+    let f=formatterCache.get(tz);
+    if(!f){f=new Intl.DateTimeFormat('en-CA',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'});formatterCache.set(tz,f);}
+    return f;
+  }
+  function parts(ms,tz){
+    const fixed=fixedMinutes(tz);
+    if(fixed!==null){
+      const d=new Date(ms+fixed*60000);
+      return {year:d.getUTCFullYear(),month:d.getUTCMonth()+1,day:d.getUTCDate(),hour:d.getUTCHours(),minute:d.getUTCMinutes(),second:d.getUTCSeconds()};
+    }
+    const out={};for(const x of formatter(tz).formatToParts(new Date(ms)))if(x.type!=='literal')out[x.type]=Number(x.value);
+    return {year:out.year,month:out.month,day:out.day,hour:out.hour,minute:out.minute,second:out.second};
+  }
+  function sameLocal(a,b){return ['year','month','day','hour','minute'].every(k=>a[k]===b[k]);}
+  function localEpoch(target,tz){
+    const fixed=fixedMinutes(tz);
+    if(fixed!==null)return Date.UTC(target.year,target.month-1,target.day,target.hour,target.minute,0,0)-fixed*60000;
+    let guess=Date.UTC(target.year,target.month-1,target.day,target.hour,target.minute,0,0);
+    const wanted=Date.UTC(target.year,target.month-1,target.day,target.hour,target.minute,0,0);
+    for(let i=0;i<4;i++){
+      const got=parts(guess,tz),seen=Date.UTC(got.year,got.month-1,got.day,got.hour,got.minute,0,0),delta=wanted-seen;
+      guess+=delta;if(Math.abs(delta)<1000)break;
+    }
+    // At a repeated DST wall time there can be two valid instants. Prefer the most recent valid one.
+    const candidates=[guess-3600000,guess,guess+3600000].filter(v=>sameLocal(parts(v,tz),target));
+    return candidates.length?Math.max(...candidates):null;
+  }
+  function previousDate({year,month,day}){const d=new Date(Date.UTC(year,month-1,day)-86400000);return {year:d.getUTCFullYear(),month:d.getUTCMonth()+1,day:d.getUTCDate()};}
+  function startFromClock(clock,tz,now=Date.now()){
+    if(!/^([01]\d|2[0-3]):[0-5]\d$/.test(clock)||!tz)return null;
+    const [hour,minute]=clock.split(':').map(Number),today=parts(now,tz);
+    let target={year:today.year,month:today.month,day:today.day,hour,minute},candidate=localEpoch(target,tz);
+    if(!Number.isFinite(candidate))return null;
+    if(candidate>now){const prev=previousDate(today);target={...prev,hour,minute};candidate=localEpoch(target,tz);}
+    return Number.isFinite(candidate)?candidate:null;
+  }
+  function clock(ms,tz=device()){const p=parts(ms,tz);return `${String(p.hour).padStart(2,'0')}:${String(p.minute).padStart(2,'0')}`;}
+  function dateKey(ms,tz=device()){const p=parts(ms,tz);return `${p.year}-${String(p.month).padStart(2,'0')}-${String(p.day).padStart(2,'0')}`;}
+  function offsetMinutes(ms,tz){
+    const fixed=fixedMinutes(tz);if(fixed!==null)return fixed;
+    const p=parts(ms,tz),asUTC=Date.UTC(p.year,p.month-1,p.day,p.hour,p.minute,p.second||0);return Math.round((asUTC-ms)/60000);
+  }
+  function labelFromMinutes(n){const sign=n<0?'−':'+',a=Math.abs(n),h=Math.floor(a/60),m=a%60;return n===0?'UTC':`UTC${sign}${h}${m?':'+String(m).padStart(2,'0'):''}`;}
+  function offsetLabel(tz,ms=Date.now()){return labelFromMinutes(offsetMinutes(ms,tz));}
+  function friendly(tz){const fixed=fixedMinutes(tz);return fixed!==null?labelFromMinutes(fixed):String(tz||'UTC').replaceAll('_',' ')}
+  function offsetValues(){return FIXED_OFFSETS.map(n=>({id:fixedId(n),minutes:n,label:labelFromMinutes(n)}));}
+  return {device,airport,parts,startFromClock,clock,dateKey,offsetLabel,friendly,offsetValues};
 })();
 
 // SESSION — immutable HOT start anchor, conservative irreversible updates.
 const Sessions = (()=>{
-  function create(inputs,result,start,method,calculatedAt=Date.now(),now=Date.now()){
+  function create(inputs,result,start,timeZone,calculatedAt=Date.now(),localTimeZone=timeZone,now=Date.now()){
     if(result?.minutes==null||!Number.isFinite(start)||start>now)return null;
     if(!Number.isFinite(calculatedAt)||calculatedAt>now)calculatedAt=now;
-    return {version:DATA.version,dataset:DATA.sources.faaSha256+DATA.sha256,start,calculatedAt,method,originalMinutes:result.minutes,activeMinutes:result.minutes,invalid:false,originalInputs:structuredClone(inputs),current:structuredClone(inputs),lastPrecip:inputs.precip,lastWeather:structuredClone(inputs),history:[]};
+    const tz=timeZone||TimeZones.device(),lt=localTimeZone||TimeZones.airport(inputs?.airport)||((tz&&tz!=='UTC')?tz:TimeZones.device());
+    return {version:DATA.version,dataset:DATA.sources.faaSha256+DATA.sha256,start,calculatedAt,timeZone:tz,localTimeZone:lt,displayTimeBasis:tz==='UTC'?'utc':'lt',originalMinutes:result.minutes,activeMinutes:result.minutes,invalid:false,originalInputs:structuredClone(inputs),current:structuredClone(inputs),lastPrecip:inputs.precip,lastWeather:structuredClone(inputs),history:[]};
   }
   function update(s,weather){
-    const updates=Object.fromEntries(['oat','skin','vis','visEntered','period','precip','drizzleIdentified'].filter(k=>k in weather).map(k=>[k,weather[k]]));
+    const updates=Object.fromEntries(['oat','skin','vis','visEntered','period','precip'].filter(k=>k in weather).map(k=>[k,weather[k]]));
     const current={...s.current,...updates,mode:'manual',metarMismatch:false};
     const errors=Validation.errors(current,{weatherOnly:true});if(Object.keys(errors).length)return {errors};
     const noPrecip=current.precip==='none';
-    const r=Engine.calculate(noPrecip?{...current,precip:s.lastPrecip,vis:(s.lastWeather||s.current).vis,period:(s.lastWeather||s.current).period,drizzleIdentified:(s.lastWeather||s.current).drizzleIdentified}:current);
+    const r=Engine.calculate(noPrecip?{...current,precip:s.lastPrecip,vis:(s.lastWeather||s.current).vis,period:(s.lastWeather||s.current).period}:current);
     // Stopping precipitation cannot bypass a colder-temperature or LOUT restriction.
     const invalid=s.invalid||r.minutes===null;
     const activeMinutes=invalid?0:Math.min(s.activeMinutes,r.minutes,s.originalMinutes);
     const same=(a,b)=>a===b||(Number.isNaN(a)&&Number.isNaN(b));
-    const changes=['oat','skin','precip','vis','period','drizzleIdentified']
+    const changes=['oat','skin','precip','vis','period']
       .filter(k=>!same(s.current?.[k],current[k]))
       .map(k=>({key:k,from:s.current?.[k],value:current[k]}));
-    const history=changes.length?[...s.history,{at:Date.now(),minutes:activeMinutes,reason:r.reason,weather:current.precip,changes}]:s.history;
-    return {session:{...s,current,lastPrecip:noPrecip?s.lastPrecip:current.precip,lastWeather:noPrecip?s.lastWeather:structuredClone(current),activeMinutes,invalid,history},result:r};
+    const now=Date.now();
+    const history=changes.length?[...s.history,{at:now,minutes:activeMinutes,reason:r.reason,weather:current.precip,changes}]:s.history;
+    const invalidatedAt=invalid?(Number.isFinite(s.invalidatedAt)?s.invalidatedAt:now):null;
+    return {session:{...s,current,lastPrecip:noPrecip?s.lastPrecip:current.precip,lastWeather:noPrecip?s.lastWeather:structuredClone(current),activeMinutes,invalid,invalidatedAt,history},result:r};
   }
   function restore(s){
     if(!s||s.version!==DATA.version||s.dataset!==DATA.sources.faaSha256+DATA.sha256||!Number.isFinite(s.start)||s.start>Date.now()||!Number.isFinite(s.originalMinutes)||s.originalMinutes<=0||!Number.isFinite(s.activeMinutes)||s.activeMinutes<0||!Array.isArray(s.history)||!Conditions.get(s.lastPrecip)||!Engine.selectedFluid(s.originalInputs))return null;
     if(Object.keys(Validation.errors(s.originalInputs)).length||Object.keys(Validation.errors(s.current,{weatherOnly:true})).length)return null;
     const gType=genericType(s.originalInputs.selection),genericI=gType==='I',genericThickened=gType==='II'||gType==='IV',actualCustom=!gType&&Engine.fluid(s.originalInputs.fluidId)?.type==='I'&&s.originalInputs.ratio==='custom';
-    const immutable=['airport','fluidId','selection','ratio',...(genericI||actualCustom?['customLoutMode',s.originalInputs.customLoutMode==='fp'?'freezingPoint':'verifiedLout']:[]),...(genericThickened?['verifiedLout']:[]),...(genericI||actualCustom?['actualPercent']:[])];
+    const immutable=['airport','fluidId','selection','ratio',...(genericI||actualCustom?['verifiedLout']:[]),...(genericThickened?['verifiedLout']:[]),...(genericI||actualCustom?['actualPercent']:[])];
     const same=(a,b)=>a===b||(Number.isNaN(a)&&Number.isNaN(b));
     if(immutable.some(k=>!same(s.current[k],s.originalInputs[k])))return null;
     const original=Engine.calculate(s.originalInputs);if(original.minutes===null)return null;
     if(!Number.isFinite(s.calculatedAt))s.calculatedAt=s.start;
+    if(!s.timeZone)s.timeZone=TimeZones.device();
+    if(!s.localTimeZone)s.localTimeZone=TimeZones.airport(s.originalInputs?.airport)||((s.timeZone&&s.timeZone!=='UTC')?s.timeZone:TimeZones.device());
+    if(!['lt','utc'].includes(s.displayTimeBasis))s.displayTimeBasis=s.timeZone==='UTC'?'utc':'lt';
+    if(s.invalid&&!Number.isFinite(s.invalidatedAt))s.invalidatedAt=Number.isFinite(s.history?.at(-1)?.at)?s.history.at(-1).at:(Number.isFinite(s.calculatedAt)?s.calculatedAt:s.start);
     s.activeMinutes=s.invalid?0:Math.min(s.activeMinutes,s.originalMinutes,original.minutes);return s;
   }
-  function startFromClock(clock,now=Date.now()){
-    if(!/^([01]\d|2[0-3]):[0-5]\d$/.test(clock))return null;
-    const [hours,minutes]=clock.split(':').map(Number),d=new Date(now);d.setHours(hours,minutes,0,0);
-    if(d.getTime()>now)d.setDate(d.getDate()-1);
-    return d.getTime();
-  }
+  function startFromClock(clock,timeZone,now=Date.now()){return TimeZones.startFromClock(clock,timeZone,now);}
   return {create,update,restore,startFromClock};
 })();
 
@@ -488,13 +744,43 @@ const hhmm=n=>`${String(Math.floor(n/60)).padStart(2,'0')}:${String(Math.floor(n
 const normalize=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 const clone=x=>structuredClone(x);
 const StationAirports=DATA.airports.filter(a=>a.stationCodes.length);
-const state={airport:'ANY',airportExplicit:false,autoWeather:null,selection:'',fluidId:'',precip:'',mode:'manual',customLoutMode:'lout',result:null,inputs:null,calculatedAt:null,session:null,sessionDraft:null,errors:{},recent:[],screen:'calc',sheet:null,stack:[]};
+const state={airport:'ANY',airportExplicit:false,autoWeather:null,selection:'',fluidId:'',precip:'',mode:'manual',result:null,inputs:null,calculatedAt:null,session:null,sessionDraft:null,startTimeZone:null,startTimeUtcOverride:false,errors:{},recent:[],screen:'calc',sheet:null,stack:[]};
 function load(key){try{return JSON.parse(localStorage.getItem(key))}catch{return null}}
 function save(key,value){try{if(value===null)localStorage.removeItem(key);else localStorage.setItem(key,JSON.stringify(value))}catch{$('storageMessage').hidden=false}}
+const SESSION_TERMINAL_RETENTION_MS=2*60*60*1000;
+function sessionExpiryAt(s){return s&&Number.isFinite(s.start)&&Number.isFinite(s.activeMinutes)?s.start+s.activeMinutes*60000:null;}
+function sessionTerminalAt(s,now=Date.now()){
+  if(!s)return null;
+  if(s.invalid)return Number.isFinite(s.invalidatedAt)?s.invalidatedAt:(Number.isFinite(s.history?.at(-1)?.at)?s.history.at(-1).at:(Number.isFinite(s.calculatedAt)?s.calculatedAt:s.start));
+  const expiry=sessionExpiryAt(s);return Number.isFinite(expiry)&&now>=expiry?expiry:null;
+}
+function sessionIsActive(s,now=Date.now()){const expiry=sessionExpiryAt(s);return !!s&&!s.invalid&&Number.isFinite(expiry)&&now<expiry;}
+function sessionMatchesCurrentCalculation(s){return sessionIsActive(s)&&Number.isFinite(state.calculatedAt)&&Number.isFinite(s?.calculatedAt)&&s.calculatedAt===state.calculatedAt;}
+function clearSession(){state.session=null;save('hotmate-session-v2',null);}
+function cleanupTerminalSession(force=false,now=Date.now()){
+  const terminalAt=sessionTerminalAt(state.session,now);
+  if(!Number.isFinite(terminalAt))return false;
+  if(!force&&now-terminalAt<SESSION_TERMINAL_RETENTION_MS)return false;
+  clearSession();return true;
+}
 state.recent=load('hotmate-recent-v2')||[];if(!Array.isArray(state.recent))state.recent=[];
 state.session=Sessions.restore(load('hotmate-session-v2'));
-const theme=load('hotmate-theme-v2');if(['dark','light'].includes(theme))document.documentElement.dataset.theme=theme;
-$('theme').value=document.documentElement.dataset.theme;
+cleanupTerminalSession(false);
+const savedTheme=load('hotmate-theme-v2');
+const theme=['system','dark','light'].includes(savedTheme)?savedTheme:'system';
+function resolvedTheme(){return document.documentElement.dataset.theme==='system'?(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'):document.documentElement.dataset.theme;}
+function updateThemeColor(){const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content=resolvedTheme()==='light'?'#f6f9fc':'#071522';}
+function applyTheme(value,persist=false){
+  const next=['system','dark','light'].includes(value)?value:'system';
+  document.documentElement.dataset.theme=next;
+  if($('theme'))$('theme').value=next;
+  updateThemeColor();
+  if(persist)save('hotmate-theme-v2',next);
+}
+applyTheme(theme);
+const systemThemeQuery=matchMedia('(prefers-color-scheme: light)');
+const syncSystemTheme=()=>{if(document.documentElement.dataset.theme==='system')updateThemeColor();};
+if(systemThemeQuery.addEventListener)systemThemeQuery.addEventListener('change',syncSystemTheme);else if(systemThemeQuery.addListener)systemThemeQuery.addListener(syncSystemTheme);
 function airportInfo(){return StationAirports.find(a=>a.icao===state.airport)}
 function conditionLabel(id){return Conditions.get(id)?.label||'Select precipitation'}
 function productName(f){
@@ -505,19 +791,20 @@ function productName(f){
 function numberField(prefix,id,label,placeholder,unit){
   const signed=['oat','skin'].includes(id);
   const invalidText=id==='oat'?'Invalid OAT':id==='skin'?'Invalid Skin temp':'';
-  return `<div class="field" id="${prefix}${id}Wrap"><label for="${prefix}${id}">${label}</label><div class="unit-field"><input id="${prefix}${id}" type="text" ${signed?'data-temperature="true"':'data-visibility-input="true"'} data-replace-value="true" placeholder="${placeholder}" autocomplete="off" autocorrect="off" spellcheck="false"><span class="unit-suffix" id="${prefix}${id}Unit" hidden>${unit}</span>${id==='vis'?`<button type="button" class="visibility-display" id="${prefix}visInvalid" data-visibility="${prefix}vis" hidden>Invalid visibility</button>`:signed?`<button type="button" class="temperature-display" id="${prefix}${id}Invalid" data-temperature-target="${prefix}${id}" hidden>${invalidText}</button>`:''}</div>${signed?`<div id="${prefix}${id}Sign" class="hint amber" hidden>Check temperature sign</div>`:''}${id==='skin'?`<div id="${prefix}skinWarning" class="hint amber" hidden>Verify B737 fuel temperature limitation</div>`:''}</div>`;
+  const labelClass=id==='vis'?' class="sr-only"':'';
+  return `<div class="field" id="${prefix}${id}Wrap"><label${labelClass} for="${prefix}${id}">${label}</label><div class="unit-field"><input id="${prefix}${id}" type="text" ${signed?'data-temperature="true"':'data-visibility-input="true"'} data-replace-value="true" placeholder="${placeholder}" autocomplete="off" autocorrect="off" spellcheck="false"><span class="unit-suffix" id="${prefix}${id}Unit" hidden>${unit}</span>${id==='vis'?`<button type="button" class="visibility-display" id="${prefix}visInvalid" data-visibility="${prefix}vis" hidden>Invalid visibility</button>`:signed?`<button type="button" class="temperature-display" id="${prefix}${id}Invalid" data-temperature-target="${prefix}${id}" hidden>${invalidText}</button>`:''}</div>${signed?`<div id="${prefix}${id}Sign" class="hint amber" hidden>Check temperature sign</div>`:''}${id==='skin'?`<div id="${prefix}skinWarning" class="hint amber" hidden>Verify B737 fuel temperature limitation</div>`:''}</div>`;
 }
 function weatherHTML(prefix=''){
-  return `<div class="fields"><div class="row" id="${prefix}temperatureRow">${numberField(prefix,'oat','OAT','Enter OAT','C')}${numberField(prefix,'skin','Skin temperature','Enter skin temp','C')}</div><div class="field" id="${prefix}precipWrap"><label for="${prefix}precip">Precipitation</label><button type="button" id="${prefix}precip" class="picker placeholder" data-picker="precip" data-prefix="${prefix}" aria-haspopup="dialog"><span>Select precipitation</span></button><div id="${prefix}snowDifference" class="hint" hidden></div><div id="${prefix}prohibited" class="hint danger" hidden>Takeoff prohibited with this condition</div></div><div class="row" id="${prefix}snowInputs" hidden>${numberField(prefix,'vis','Visibility','Enter visibility','m')}<div class="field"><label for="${prefix}period">Time of day</label><select id="${prefix}period"><option value="">Select time</option><option value="day">Day</option><option value="night">Night</option></select></div></div><div class="check" id="${prefix}drizzleWrap" hidden><input type="checkbox" id="${prefix}drizzle"><label for="${prefix}drizzle">Freezing drizzle positively identified</label></div></div>`;
+  return `<div class="fields"><div class="row" id="${prefix}temperatureRow">${numberField(prefix,'oat','OAT','Enter OAT','C')}${numberField(prefix,'skin','Skin temperature','Enter skin temp','C')}</div><div class="field" id="${prefix}precipWrap"><label class="sr-only" for="${prefix}precip">Precipitation</label><button type="button" id="${prefix}precip" class="picker placeholder" data-picker="precip" data-prefix="${prefix}" aria-haspopup="dialog"><span>Select precipitation</span></button><div id="${prefix}snowDifference" class="hint" hidden></div><div id="${prefix}prohibited" class="hint danger" hidden>Takeoff prohibited with this condition</div></div><div class="row" id="${prefix}snowInputs" hidden>${numberField(prefix,'vis','Visibility','Enter visibility','m')}<div class="field"><label class="sr-only" for="${prefix}period">Time of day</label><select id="${prefix}period"><option value="">Select time</option><option value="day">Day</option><option value="night">Night</option></select></div></div></div>`;
 }
 $('weatherFields').innerHTML=weatherHTML();
 function manualVisibility(prefix=''){const el=$(prefix+'vis');return el.dataset.normalized===el.value&&el.value!==''?Number(el.value):Validation.visibility(el.value)}
 function readWeather(prefix=''){
   const auto=!prefix&&state.mode==='auto',w=state.autoWeather;
-  return {oat:auto?w?.oat??NaN:Validation.integer($(prefix+'oat').value),skin:Validation.integer($(prefix+'skin').value),vis:auto?w?.vis??NaN:manualVisibility(prefix),visEntered:auto?!!w:$(prefix+'vis').value.trim()!=='',period:$(prefix+'period').value,precip:prefix?state.sessionDraft?.precip:auto?w?.precip||'':state.precip,drizzleIdentified:$(prefix+'drizzle').checked};
+  return {oat:auto?w?.oat??NaN:Validation.integer($(prefix+'oat').value),skin:Validation.integer($(prefix+'skin').value),vis:auto?w?.vis??NaN:manualVisibility(prefix),visEntered:auto?!!w:$(prefix+'vis').value.trim()!=='',period:$(prefix+'period').value,precip:prefix?state.sessionDraft?.precip:auto?w?.precip||'':state.precip};
 }
 const metarMismatch=()=>state.mode==='auto'&&!!state.autoWeather&&state.airport!=='ANY'&&state.autoWeather.station!==state.airport;
-function readInputs(){return {...readWeather(),airport:state.airport,selection:state.selection,fluidId:state.fluidId,ratio:$('ratio').value,mode:state.mode,customLoutMode:state.customLoutMode,autoReady:!!state.autoWeather,metarMismatch:metarMismatch(),actualPercent:Validation.integer($('actualPercent').value),verifiedLout:Validation.integer($('verifiedLout').value),verifiedLoutEntered:$('verifiedLout').value.trim()!=='',freezingPoint:Validation.integer($('freezingPoint').value),freezingPointEntered:$('freezingPoint').value.trim()!==''}}
+function readInputs(){return {...readWeather(),airport:state.airport,selection:state.selection,fluidId:state.fluidId,ratio:$('ratio').value,mode:state.mode,autoReady:!!state.autoWeather,metarMismatch:metarMismatch(),actualPercent:Validation.integer($('actualPercent').value),verifiedLout:Validation.integer($('verifiedLout').value),verifiedLoutEntered:$('verifiedLout').value.trim()!==''}}
 function setPicker(id,text,selected=true){const el=$(id);if(!el)return;el.querySelector('span').textContent=text;el.classList.toggle('placeholder',!selected);el.classList.toggle('selected',selected)}
 function clearResult(){state.result=null;state.inputs=null;state.calculatedAt=null;$('result').hidden=true;}
 const severity=intensity=>intensity==='heavy'?'severity-heavy':intensity==='moderate'?'severity-moderate':['light','very light'].includes(intensity)?'severity-light':'';
@@ -576,10 +863,9 @@ function refreshWeather(prefix=''){
   $(''+prefix+'skinWarning').hidden=!(skinValid&&x.skin< -43);
   $(prefix+'skin').classList.toggle('caution-field',skinValid&&(x.skin< -43||x.skin>10));
   $(prefix+'oat').classList.toggle('caution-field',oatValid&&x.oat>10);
-  $(prefix+'drizzleWrap').hidden=p?.family!=='fzdz';
   $(prefix+'vis').setAttribute('aria-required',String(needsSnow));$(prefix+'period').setAttribute('aria-required',String(needsSnow));
   $(prefix+'period').classList.toggle('good',['day','night'].includes(x.period));
-  const intensity=Conditions.snowy(p)?Conditions.prohibited(p)?p.reported:Engine.snow(x.vis,x.oat,x.period)?.intensity:['fzdz','fzra','rain'].includes(p?.family)?p.reported:null;
+  const intensity=Conditions.needsSnow(p)?Engine.snow(x.vis,x.oat,x.period)?.intensity:Conditions.prohibited(p)&&Conditions.snowy(p)?p.reported:['fzdz','fzra','rain'].includes(p?.family)?p.reported:null;
   const prohibited=Conditions.prohibited(p)||intensity==='heavy'&&Conditions.snowy(p);
   const visibilityDerived=Conditions.snowy(p)&&!Conditions.prohibited(p)&&!!intensity;
   showIntensity(prefix+'snowDifference',intensity,{visibilityDerived});$(prefix+'prohibited').hidden=!prohibited;
@@ -610,26 +896,20 @@ function refresh(){
   const f=Engine.fluid(state.fluidId),custom=!generic&&f?.type==='I'&&x.ratio==='custom',manualLout=generic||custom;
   $('customDilution').hidden=!manualLout;
   $('actualPercentField').hidden=!(genericI||custom);
-  $('actualPercentField').querySelector('label').textContent=genericI?'Concentration (fluid %)':'Actual fluid %';
-  $('actualPercent').placeholder=genericI?'Enter concentration':'Enter fluid %';
-  $('customExplanation').hidden=!manualLout;
+  const actualPercentLabel=$('actualPercentField').querySelector('label');
+  actualPercentLabel.textContent=genericI?'Concentration (fluid %)':'Actual fluid %';
+  actualPercentLabel.classList.add('sr-only');
+  $('actualPercent').placeholder='Enter concentration';
+  $('customExplanationDetails').hidden=!manualLout;
+  if(!manualLout)$('customExplanationDetails').open=false;
   $('customDilutionRow').classList.toggle('single-column',genericThickened);
-  $('verifiedLoutField').hidden=!manualLout||state.customLoutMode!=='lout';
+  $('verifiedLoutField').hidden=!manualLout;
   $('verifiedLoutField').querySelector('label').textContent=(genericI||genericThickened)?'Verified LOUT C (optional)':'Verified dilution LOUT C';
   $('verifiedLout').placeholder=(genericI||genericThickened)?'Optional LOUT':'Enter LOUT';
-  $('freezingPointField').hidden=!manualLout||genericThickened||state.customLoutMode!=='fp';
-  $('freezingPointField').querySelector('label').textContent=genericI?'Mixture freezing point C':'Actual mixture freezing point C';
-  $('freezingPoint').placeholder='Enter freezing point';
-  $('customSourceToggle').hidden=!manualLout||genericThickened;
-  $('customSourceToggle').textContent=state.customLoutMode==='fp'?'Verified LOUT available? Enter LOUT':'LOUT unavailable? Use freezing point';
-  const showDerivedLout=manualLout&&!genericThickened&&state.customLoutMode==='fp'&&Number.isInteger(x.freezingPoint)&&x.freezingPoint>=-54&&x.freezingPoint<=54&&Number.isFinite(lout);
-  $('derivedLoutNote').hidden=!showDerivedLout;
-  $('derivedLoutNote').textContent=showDerivedLout?`Derived LOUT: ${temp(lout)}`:'';
-  $('derivedLoutNote').className='hint'+(showDerivedLout?' good':'');
   const ratioValid=genericI?(Number.isInteger(x.actualPercent)&&x.actualPercent>=1&&x.actualPercent<=100):genericThickened?GENERIC_THICKENED_RATIOS.includes(x.ratio):!!x.ratio&&!!f&&(f.concentrations.some(c=>c.ratio===x.ratio)||(f.type==='I'&&x.ratio==='custom'));
   $('ratio').classList.toggle('good',ratioValid);
   const max=Validation.maxConcentration(f);
-  $('customExplanation').textContent=genericI?'Enter the actual fluid concentration received from the DSP. LOUT verification is optional: enter a verified LOUT, use the actual mixture freezing point if available, or leave it blank and HOTmate will remind you to verify LOUT before use.':genericThickened?`LOUT is optional for Generic Type ${gType}. If left blank, HOTmate will calculate HOT and remind you to verify the actual fluid LOUT before use.`:max===null?'The source lists this product as supplied without a numerical maximum. Another dilution cannot be validated.':`${max}/${100-max} is the maximum concentration. For a lower dilution, enter actual fluid % and the verified LOUT. If LOUT is unavailable, use the actual mixture freezing point; HOTmate will derive LOUT as freezing point + 10 C.`;
+  $('customExplanation').textContent=genericI?'Enter the actual fluid concentration received from the DSP. Verified LOUT is optional. If left blank, HOTmate will calculate HOT and remind you to verify the actual fluid LOUT before use.':genericThickened?`LOUT is optional for Generic Type ${gType}. If left blank, HOTmate will calculate HOT and remind you to verify the actual fluid LOUT before use.`:max===null?'The source lists this product as supplied without a numerical maximum. Another dilution cannot be validated.':`${max}/${100-max} is the maximum concentration. For a lower dilution, enter actual fluid % and the verified LOUT from an approved source.`;
   setPicker('fluid',generic?`Generic Type ${state.selection.slice(8)}`:f?`${productName(f)} · Type ${f.type}`:'Search for fluid',!!state.selection);
   setPicker('actualFluid',f?`${f.manufacturer} · ${f.name}`:'Select actual product',!!f);
   const a=airportInfo();setPicker('airport',a?`${a.icao}${a.iata?' · '+a.iata:''} · ${a.city||a.name}`:'Any airport',!!a||state.airportExplicit);
@@ -637,15 +917,14 @@ function refresh(){
   $('deicingLocation').hidden=!a;$('deicingLocation').textContent=a?(noDeicing?'No de-icing available':`De-icing location: ${locations.join(' / ')}`):'';$('deicingLocation').className='hint '+(noDeicing?'danger':'');
   const family=f?.name.match(/Safewing MP IV LAUNCH|PROFLIGHT|4Flite|ADD-PROTECT|FCY-EGIV|AVIA\s?Flight|ABC-/i)?.[0];
   const similar=f?DATA.fluids.filter(g=>g.id!==f.id&&((family&&g.type===f.type&&normalize(g.name).includes(normalize(family)))||normalize(g.name)===normalize(f.name))):[];
-  $('similarWarning').hidden=!similar.length;$('similarWarning').textContent=similar.length?`Verify exact ${similar.some(g=>g.manufacturer!==f.manufacturer)?'manufacturer and ':''}product: ${f.name}.`:'';
+  $('similarWarning').hidden=!similar.length;$('similarWarning').textContent=similar.length?'Caution: similar product name may exist.':'';
   clearFixedErrors();refreshCustomDilutionFields(x);
 }
 function refreshCustomDilutionFields(x=readInputs()){
   const f=Engine.fluid(state.fluidId),max=Validation.maxConcentration(f),genericI=state.selection==='generic-I';
   const specs=[
     {id:'actualPercent',value:x.actualPercent,valid:Number.isInteger(x.actualPercent)&&x.actualPercent>0&&(genericI?x.actualPercent<=100:max!==null&&x.actualPercent<=max)},
-    {id:'verifiedLout',value:x.verifiedLout,valid:Number.isInteger(x.verifiedLout)&&x.verifiedLout>=-54&&x.verifiedLout<=54},
-    {id:'freezingPoint',value:x.freezingPoint,valid:Number.isInteger(x.freezingPoint)&&x.freezingPoint>=-54&&x.freezingPoint<=54}
+    {id:'verifiedLout',value:x.verifiedLout,valid:Number.isInteger(x.verifiedLout)&&x.verifiedLout>=-54&&x.verifiedLout<=54}
   ];
   for(const spec of specs){
     const el=$(spec.id),display=$(spec.id+'Invalid'),unit=$(spec.id+'Unit');if(!el||!display||!unit)continue;
@@ -675,7 +954,7 @@ function syncConcentrations(){
   $('ratio').innerHTML='<option value="">Select concentration</option>'+(f?.concentrations||[]).map(c=>`<option value="${esc(c.ratio)}">${esc(c.ratio.replace('/',' / '))}</option>`).join('')+(f?.type==='I'?'<option value="custom">Other dilution - DSP</option>':'');
   $('ratio').value=f?.concentrations.some(c=>c.ratio===old)||f?.type==='I'&&old==='custom'?old:f?.concentrations.length===1?f.concentrations[0].ratio:'';
 }
-const fieldOrder=['airport','metar','oat','skin','precip','vis','period','fluid','actualFluid','ratio','actualPercent','verifiedLout','freezingPoint'];
+const fieldOrder=['airport','metar','oat','skin','precip','vis','period','fluid','actualFluid','ratio','actualPercent','verifiedLout'];
 function errorElement(id,prefix=''){
   if(prefix)return $(prefix+id);
   if(id==='metar')return $('metarText');
@@ -686,7 +965,7 @@ function markErrors(errors,prefix=''){
   const ids=prefix?['oat','skin','precip','vis','period']:fieldOrder;
   const elements=new Set(ids.map(id=>errorElement(id,prefix)).filter(Boolean));
   for(const el of elements){const relevant=ids.filter(id=>errorElement(id,prefix)===el),message=relevant.map(id=>errors[id]).find(Boolean),invalid=!!message||el.dataset.parseInvalid==='true'||el.dataset.customInvalid==='true';el.classList.toggle('invalid',invalid);el.setAttribute('aria-invalid',String(invalid));if(message)el.setAttribute('aria-label',message);else el.removeAttribute('aria-label');}
-  if(!prefix)for(const id of ['actualPercent','verifiedLout','freezingPoint']){const inlineInvalid=$(id).dataset.customInvalid==='true';$(id+'Error').hidden=!errors[id]||inlineInvalid;$(id+'Error').textContent=inlineInvalid?'':(errors[id]||'');}
+  if(!prefix)for(const id of ['actualPercent','verifiedLout']){const inlineInvalid=$(id).dataset.customInvalid==='true';$(id+'Error').hidden=!errors[id]||inlineInvalid;$(id+'Error').textContent=inlineInvalid?'':(errors[id]||'');}
 }
 function clearFixedErrors(){
   const next=Validation.errors(readInputs());for(const key of Object.keys(state.errors))if(!next[key])delete state.errors[key];markErrors(state.errors);
@@ -701,9 +980,9 @@ function firstError(errors,prefix=''){
   el.focus?.({preventScroll:true});
 }
 function resetCalculation(){
-  state.selection='';state.fluidId='';state.precip='';state.autoWeather=null;state.customLoutMode='lout';state.errors={};state.metarError=false;
-  for(const id of ['oat','skin','vis','period','metarText','actualPercent','verifiedLout','freezingPoint'])$(id).value='';
-  $('drizzle').checked=false;$('metarMessage').hidden=true;$('metarMessage').textContent='';
+  state.selection='';state.fluidId='';state.precip='';state.autoWeather=null;state.errors={};state.metarError=false;
+  for(const id of ['oat','skin','vis','period','metarText','actualPercent','verifiedLout'])$(id).value='';
+  $('metarMessage').hidden=true;$('metarMessage').textContent='';
   delete $('vis').dataset.normalized;$('vis').dataset.parseInvalid='false';$('visInvalid').hidden=true;
   document.querySelectorAll('#calcForm [data-temperature],#calcForm [data-integer-input]').forEach(el=>{el.dataset.accepted='';el.dataset.customInvalid='false';delete el.dataset.pendingSign;el.dataset.replaceArmed='false';const display=$(el.id+'Invalid');if(display)display.hidden=true;el.classList.remove('caution-value','good');const unit=$(el.id+'Unit');if(unit){unit.hidden=true;unit.classList.remove('caution-value')}});
   document.querySelectorAll('#calcForm .invalid').forEach(el=>{el.classList.remove('invalid');el.setAttribute('aria-invalid','false');el.removeAttribute('aria-label')});
@@ -712,25 +991,42 @@ function resetCalculation(){
 function showScreen(screen){
   state.screen=screen;document.querySelectorAll('.screen').forEach(el=>el.classList.toggle('active',el.id===screen+'Screen'));
   document.querySelectorAll('.nav-btn').forEach(el=>{if(el.dataset.screen===screen)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});
-  if(screen==='session')renderSession();window.scrollTo({top:0,behavior:'instant'});
+  if(screen==='session')renderSession();$('main').scrollTo({top:0,behavior:'instant'});
 }
 function calculate(){
   if(state.mode==='manual'&&Conditions.needsSnow(Conditions.get(state.precip)))commitVisibility();
   const x=readInputs(),errors=Validation.errors(x);state.errors=errors;markErrors(errors);
   if(Object.keys(errors).length){clearResult();firstError(errors);return;}
-  state.inputs=clone(x);state.result=Engine.calculate(x);state.calculatedAt=Date.now();renderResult();
+  state.inputs=clone(x);state.result=Engine.calculate(x);state.calculatedAt=Date.now();
+  if(state.result?.minutes!==null&&state.session&&!sessionIsActive(state.session))cleanupTerminalSession(true);
+  renderResult();
   $('result').hidden=false;$('result').scrollIntoView({behavior:'smooth',block:'start'});$('result').focus({preventScroll:true});
 }
 function renderResult(){
   const r=state.result;if(!r)return;const f=Engine.selectedFluid(state.inputs),p=Conditions.get(state.inputs.precip);
   const context=Conditions.snowy(p)?`${(r.intensity||p.reported)[0].toUpperCase()+(r.intensity||p.reported).slice(1)} ${p.family==='snowfog'?'snow / freezing fog':p.family==='snowrain'?'snow / rain':p.family==='snowdrizzle'?'snow / drizzle':p.family==='snowcrystals'?'snow / ice crystals':'snow'}`:p.name;
   const gType=genericType(state.inputs.selection),loutUnverified=!!gType&&r.lout===null;
-  $('result').innerHTML=r.minutes!==null?`<div class="eyebrow">Holdover time</div><div class="hot ${r.short?'amber':'good'}">${hhmm(r.minutes)}</div>${r.short?'<p class="short-hot-warning">HOT less than 10 minutes</p>':''}<p class="context">${esc(context)} · Type ${f.type} · ${esc(ratioLabel(state.inputs))}</p><div class="metrics"><div class="metric"><span class="label">App temp</span><strong>${temp(r.appTemp)}</strong></div><div class="metric"><span class="label">Intensity</span><strong class="${severity(r.intensity)}">${esc(r.intensity?.toUpperCase()||'—')}</strong></div><div class="metric"><span class="label">LOUT</span><strong class="${loutUnverified?'amber':''}">${loutUnverified?'—':temp(r.lout)}</strong></div></div>${loutUnverified?'<p class="result-lout-warning">Verify fluid LOUT before use</p>':''}<div><button type="button" class="link" id="notesBtn">Notes</button></div><button type="button" class="primary" id="startSessionBtn">${state.session?'View HOT session':'Start HOT session'}</button>`:`<div class="failure-title">HOT CANNOT BE DETERMINED</div><p class="reason">Reason: ${esc(r.reason)}</p>${r.notes.length?'<button type="button" class="link" id="notesBtn">Notes</button>':''}`;
+  $('result').innerHTML=r.minutes!==null?`<div class="eyebrow">Holdover time</div><div class="hot ${r.short?'amber':'good'}">${hhmm(r.minutes)}</div>${r.short?'<p class="short-hot-warning">HOT less than 10 minutes</p>':''}<p class="context">${esc(context)} · Type ${f.type} · ${esc(ratioLabel(state.inputs))}</p><div class="metrics"><div class="metric"><span class="label">App temp</span><strong>${temp(r.appTemp)}</strong></div><div class="metric"><span class="label">Intensity</span><strong class="${severity(r.intensity)}">${esc(r.intensity?.toUpperCase()||'—')}</strong></div><div class="metric"><span class="label">LOUT</span><strong class="${loutUnverified?'amber':''}">${loutUnverified?'—':temp(r.lout)}</strong></div></div>${loutUnverified?'<p class="result-lout-warning">Verify fluid LOUT before use</p>':''}<div><button type="button" class="link" id="notesBtn">Notes</button></div><button type="button" class="primary" id="startSessionBtn">${sessionMatchesCurrentCalculation(state.session)?'View HOT session':'Start HOT session'}</button>`:`<div class="failure-title">HOT CANNOT BE DETERMINED</div><p class="reason">Reason: ${esc(r.reason)}</p>${r.notes.length?'<button type="button" class="link" id="notesBtn">Notes</button>':''}`;
+}
+function lockPageScroll(){
+  const main=$('main');
+  state.scrollY=main.scrollTop||0;
+  main.style.overflowY='hidden';
+  main.style.touchAction='none';
+  main.style.overscrollBehavior='none';
+}
+function unlockPageScroll(){
+  const main=$('main');
+  const y=Number.isFinite(state.scrollY)?state.scrollY:0;
+  main.style.overflowY='';
+  main.style.touchAction='';
+  main.style.overscrollBehavior='';
+  main.scrollTop=y;
 }
 function openSheet(title,{search=false,type='',prefix=''}={}){
   const active=!$('overlay').hidden;
   if(active){const fragment=document.createDocumentFragment();while($('sheetBody').firstChild)fragment.append($('sheetBody').firstChild);state.stack.push({sheet:state.sheet,title:$('sheetTitle').textContent,search:!$('sheetSearchWrap').hidden,query:$('sheetSearch').value,fragment,focus:document.activeElement});}
-  else {state.returnFocus=document.activeElement;state.scrollY=window.scrollY;document.body.style.overflow='hidden';$('main').inert=true;document.querySelector('.toolbar').inert=true;}
+  else {state.returnFocus=document.activeElement;lockPageScroll();$('main').inert=true;document.querySelector('.toolbar').inert=true;}
   state.sheet={type,prefix};$('sheetTitle').textContent=title;$('sheetSearchWrap').hidden=!search;$('sheetSearch').value='';$('sheetBody').replaceChildren();$('overlay').hidden=false;
   // iOS only reliably opens the software keyboard when focus occurs synchronously inside the originating tap.
   // Fluid intentionally does not autofocus so station fluids are visible before the keyboard appears.
@@ -739,10 +1035,10 @@ function openSheet(title,{search=false,type='',prefix=''}={}){
 }
 function closeSheet(){
   if(state.stack.length){const prev=state.stack.pop();state.sheet=prev.sheet;$('sheetTitle').textContent=prev.title;$('sheetSearchWrap').hidden=!prev.search;$('sheetSearch').value=prev.query;$('sheetBody').replaceChildren(prev.fragment);if(prev.search)$('sheetBody').setAttribute('role','listbox');else $('sheetBody').removeAttribute('role');refreshWeather('u-');prev.focus?.focus();return;}
-  $('overlay').hidden=true;state.sheet=null;document.body.style.overflow='';$('main').inert=false;document.querySelector('.toolbar').inert=false;state.returnFocus?.focus({preventScroll:true});
+  $('overlay').hidden=true;state.sheet=null;unlockPageScroll();$('main').inert=false;document.querySelector('.toolbar').inert=false;state.returnFocus?.focus({preventScroll:true});
 }
 function picker(kind,prefix=''){
-  openSheet(kind==='airport'?'Airport':kind==='precip'?'Precipitation':kind==='actualFluid'?'Actual fluid':'Fluid',{search:true,type:kind,prefix});renderPicker();
+  openSheet(kind==='airport'?'Airport':kind==='precip'?'Precipitation':kind==='actualFluid'?'Actual fluid':kind==='timezone'?'Select UTC offset':'Fluid',{search:kind!=='timezone',type:kind,prefix});renderPicker();
 }
 const matches=(text,query)=>query.split(/\s+/).every(s=>normalize(text).includes(s));
 function pickRow(value,name,sub,selected=false){return `<button type="button" class="pick-row" data-value="${esc(value)}" role="option" aria-selected="${selected}"><span class="name">${esc(name)}</span>${sub?`<span class="sub">${esc(sub)}</span>`:''}</button>`}
@@ -755,6 +1051,9 @@ function renderPicker(){
     const count=list.length;list=list.slice(0,100);
     html=(matches('Any airport Airport selection is optional',q)?pickRow('ANY','Any airport','Airport selection is optional',state.airport==='ANY'):'')+list.map(a=>pickRow(a.icao,`${a.icao}${a.iata?' · '+a.iata:''}`,`${a.name}${a.city&&!normalize(a.name).includes(normalize(a.city))?' · '+a.city:''}`,a.icao===state.airport)).join('');
     if(count>100)html+='<p class="hint">Type to narrow the list.</p>';
+  }else if(kind==='timezone'){
+    const deviceOffset=TimeZones.offsetLabel(TimeZones.device());
+    html=TimeZones.offsetValues().map(z=>pickRow(z.id,z.label,z.label===deviceOffset?'Device offset':'',state.startTimeZone===z.id)).join('');
   }else if(kind==='precip'){
     const current=state.sheet.prefix?state.sessionDraft?.precip:state.precip;
     html=Conditions.items.filter(p=>matches(p.label,q)).map(p=>pickRow(p.id,p.label,'',p.id===current)).join('');
@@ -782,6 +1081,9 @@ function renderPicker(){
 }
 function choose(value){
   const {type,prefix}=state.sheet;
+  if(type==='timezone'){
+    state.startTimeZone=value;closeSheet();refreshStartTimeZoneUI(true);return;
+  }
   if(type==='airport'){
     if(value===state.airport&&state.airportExplicit){closeSheet();return;}
     const changed=value!==state.airport;
@@ -802,30 +1104,62 @@ function choose(value){
   if(prefix){refreshWeather(prefix);clearUpdateErrors();}
   else{clearResult();refresh();}
 }
-function clearCustom(){for(const id of ['actualPercent','verifiedLout','freezingPoint'])$(id).value='';state.customLoutMode='lout';if($('ratio').value==='custom')$('ratio').value='';}
+function clearCustom(){for(const id of ['actualPercent','verifiedLout'])$(id).value='';if($('ratio').value==='custom')$('ratio').value='';}
 function ratioLabel(x){return x.selection==='generic-I'&&Number.isInteger(x.actualPercent)?`${x.actualPercent} / ${100-x.actualPercent} · DSP`:x.ratio==='custom'?`${x.actualPercent} / ${100-x.actualPercent} · DSP`:x.ratio==='as supplied'?'As supplied':x.ratio}
 function notes(){openSheet('Notes',{type:'notes'});$('sheetBody').removeAttribute('role');$('sheetBody').innerHTML=state.result.notes.length?`<ul class="notes-list">${state.result.notes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`:'<p class="small-note">No additional condition-specific notes.</p>';}
-const clockTime=ms=>{const d=new Date(ms);return `${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`};
-const crossesDay=(start,end)=>new Date(start).toDateString()!==new Date(end).toDateString();
+const clockTime=(ms,tz=TimeZones.device())=>TimeZones.clock(ms,tz);
+const crossesDay=(start,end,tz=TimeZones.device())=>TimeZones.dateKey(start,tz)!==TimeZones.dateKey(end,tz);
+function activeStartTimeZone(){return state.startTimeUtcOverride?'UTC':TimeZones.airport(state.airport)||state.startTimeZone||TimeZones.device()}
+function timeBasisLabel(tz){return tz==='UTC'?'UTC':'LT'}
+function refreshStartTimeZoneUI(resetClock=false){
+  if(!$('startTime'))return;
+  const airportTz=TimeZones.airport(state.airport),tz=activeStartTimeZone();
+  if(resetClock)$('startTime').value=clockTime(Date.now(),tz);
+  const info=$('startTimeZoneInfo');
+  if(info){
+    if(state.startTimeUtcOverride)info.textContent='UTC';
+    else info.textContent=`${airportTz?'Airport time':state.startTimeZone?'Selected time zone':'Device time'} · ${TimeZones.offsetLabel(tz)}`;
+  }
+  const lt=$('startBasisLT'),utc=$('startBasisUTC');
+  if(lt)lt.setAttribute('aria-pressed',String(!state.startTimeUtcOverride));
+  if(utc)utc.setAttribute('aria-pressed',String(state.startTimeUtcOverride));
+  const select=$('startTimeZoneSelect');
+  if(select){
+    select.value=state.startTimeZone||'';
+    select.classList.toggle('good',!!state.startTimeZone);
+    select.disabled=state.startTimeUtcOverride;
+  }
+  const zoneField=$('startTimeZoneField');
+  if(zoneField)zoneField.hidden=state.startTimeUtcOverride;
+}
+function startTimeZoneOptions(){
+  return `<option value="">Select UTC offset</option>`+TimeZones.offsetValues().map(z=>`<option value="${esc(z.id)}">${esc(z.label)}</option>`).join('');
+}
 function openStart(){
-  if(state.session){showScreen('session');return;}
+  if(sessionMatchesCurrentCalculation(state.session)){showScreen('session');return;}
+  const replacingActive=sessionIsActive(state.session);
+  if(state.session&&!replacingActive)cleanupTerminalSession(true);
   if(state.result?.minutes==null)return;
-  openSheet('Start HOT session',{type:'start'});$('sheetBody').removeAttribute('role');
-  $('sheetBody').innerHTML=`<div class="fields"><div class="field"><label for="startTime">HOT start time (LT)</label><input id="startTime" type="time" value="${clockTime(Date.now())}"><p class="hint">One-step: start of final treatment · Two-step: start of anti-icing step</p></div><div id="startError" class="hint danger" hidden></div></div><button class="primary" type="button" id="confirmStart">Start session</button>`;
+  state.startTimeZone=null;
+  state.startTimeUtcOverride=false;
+  const airportTz=TimeZones.airport(state.airport),tz=airportTz||TimeZones.device();
+  openSheet(replacingActive?'Start new HOT session':'Start HOT session',{type:'start'});$('sheetBody').removeAttribute('role');
+  $('sheetBody').innerHTML=`${replacingActive?'<p class="hint amber" style="margin:0 0 12px">An active HOT session is running. Starting this session will replace it.</p>':''}<div class="fields"><div class="field"><div class="start-time-heading"><label for="startTime">HOT start time</label><div class="time-basis-toggle" role="group" aria-label="Time basis"><button id="startBasisLT" type="button" aria-pressed="true">LT</button><button id="startBasisUTC" type="button" aria-pressed="false">UTC</button></div></div><div class="start-time-input-wrap"><input id="startTime" type="time" value="${clockTime(Date.now(),tz)}"></div><p class="hint" id="startTimeZoneInfo">${airportTz?`Airport time · ${TimeZones.offsetLabel(tz)}`:`Device time · ${TimeZones.offsetLabel(tz)}`}</p><p class="hint">One-step: start of final treatment · Two-step: start of anti-icing step</p></div>${airportTz?'':`<div class="field" id="startTimeZoneField"><label for="startTimeZoneSelect">Time zone</label><div class="start-timezone-row"><select id="startTimeZoneSelect" aria-label="Time zone">${startTimeZoneOptions()}</select></div><p class="hint">Select airport to use airport local time</p></div>`}<div id="startError" class="hint danger" hidden></div></div><button class="primary" type="button" id="confirmStart">Start session</button>`;
+  refreshStartTimeZoneUI(false);
 }
 function startSession(){
-  const start=Sessions.startFromClock($('startTime').value);
+  const tz=activeStartTimeZone(),ltTz=TimeZones.airport(state.airport)||state.startTimeZone||TimeZones.device(),start=Sessions.startFromClock($('startTime').value,tz);
   if(!Number.isFinite(start)||start>Date.now()){$('startTime').classList.add('invalid');$('startError').textContent='Enter a valid HOT start time.';$('startError').hidden=false;return;}
-  state.session=Sessions.create(state.inputs,state.result,start,null,state.calculatedAt);save('hotmate-session-v2',state.session);closeSheet();showScreen('session');renderResult();
+  state.session=Sessions.create(state.inputs,state.result,start,tz,state.calculatedAt,ltTz);save('hotmate-session-v2',state.session);closeSheet();showScreen('session');renderResult();
 }
 function sessionWeatherSummary(s){
   const p=Conditions.get(s?.current?.precip);
   const info={precipLabel:conditionLabel(s?.current?.precip),visibilityLabel:'',showVisibility:false,intensityLabel:'',showIntensity:false};
   if(!p)return info;
   if(Conditions.snowy(p)){
-    info.showVisibility=Number.isFinite(s.current?.vis);
+    info.showVisibility=Conditions.needsSnow(p)&&Number.isFinite(s.current?.vis);
     info.visibilityLabel=info.showVisibility?`${Math.min(9999,Math.round(s.current.vis))} m`:'—';
-    const intensity=Conditions.prohibited(p)?p.reported:Engine.snow(s.current?.vis,s.current?.oat,s.current?.period)?.intensity;
+    const intensity=Conditions.needsSnow(p)?Engine.snow(s.current?.vis,s.current?.oat,s.current?.period)?.intensity:Conditions.prohibited(p)?p.reported:null;
     if(intensity&&intensity!=='—'){info.showIntensity=true;info.intensityLabel=String(intensity).toUpperCase();}
   }else if(['fzdz','fzra','rain'].includes(p.family)&&p.reported&&p.reported!=='—'){
     info.showIntensity=true;
@@ -838,7 +1172,6 @@ function sessionHistoryValue(key,value){
   if(key==='precip')return conditionLabel(value);
   if(key==='vis')return Number.isFinite(value)?Math.min(9999,Math.round(value))+' m':'—';
   if(key==='period')return value==='day'?'Day':value==='night'?'Night':String(value??'—');
-  if(key==='drizzleIdentified')return value?'identified':'not identified';
   return String(value??'—');
 }
 function sessionHistoryChangeText(entry){
@@ -849,7 +1182,6 @@ function sessionHistoryChangeText(entry){
     if(key==='precip')return Conditions.get(change?.value)?.name||sessionHistoryValue(key,change?.value);
     if(key==='vis')return sessionHistoryValue(key,change?.value);
     if(key==='period')return sessionHistoryValue(key,change?.value);
-    if(key==='drizzleIdentified')return `Drizzle ${sessionHistoryValue(key,change?.value)}`;
     const name=names[key];
     return name?`${name} ${sessionHistoryValue(key,change?.value)}`:'';
   }).filter(Boolean).join(' • ');
@@ -865,13 +1197,24 @@ function sessionInitialWeatherText(s){
   if(p&&Conditions.needsSnow(p)&&['day','night'].includes(x.period))parts.push(x.period==='day'?'Day':'Night');
   let intensity=null;
   if(p){
-    if(Conditions.snowy(p))intensity=Conditions.prohibited(p)?p.reported:Engine.snow(x.vis,x.oat,x.period)?.intensity;
+    if(Conditions.snowy(p))intensity=Conditions.needsSnow(p)?Engine.snow(x.vis,x.oat,x.period)?.intensity:Conditions.prohibited(p)?p.reported:null;
     else if(['fzdz','fzra','rain'].includes(p.family))intensity=p.reported;
   }
   if(intensity&&intensity!=='—')parts.push(`Intensity ${String(intensity).toUpperCase()}`);
   return parts.join(' • ');
 }
+function sessionLocalTimeZone(s){
+  return s?.localTimeZone||TimeZones.airport(s?.originalInputs?.airport)||((s?.timeZone&&s.timeZone!=='UTC')?s.timeZone:TimeZones.device());
+}
+function sessionDisplayTimeZone(s){
+  return s?.displayTimeBasis==='utc'?'UTC':sessionLocalTimeZone(s);
+}
+function setSessionTimeBasis(basis){
+  const s=state.session;if(!s||!['lt','utc'].includes(basis)||s.displayTimeBasis===basis)return;
+  s.displayTimeBasis=basis;save('hotmate-session-v2',s);renderSession();
+}
 function renderSession(){
+  if(cleanupTerminalSession(false)){$('sessionContent').innerHTML='<p class="empty">No HOT session.</p><button class="secondary" type="button" id="goCalculate">Calculate HOT</button>';renderResult();return;}
   const s=state.session;
   if(!s){$('sessionContent').innerHTML='<p class="empty">No HOT session.</p><button class="secondary" type="button" id="goCalculate">Calculate HOT</button>';return;}
   const remaining=Math.max(0,Math.floor((s.start+s.activeMinutes*60000-Date.now())/1000)),expired=remaining===0;
@@ -880,17 +1223,36 @@ function renderSession(){
   const sessionUpdated=!!s.history.length;
   const hotLabel=sessionUpdated?'Original / active HOT':'Active HOT';
   const hotValue=sessionUpdated?`${hhmm(s.originalMinutes)} / ${s.invalid?'—':hhmm(s.activeMinutes)}`:(s.invalid?'—':hhmm(s.activeMinutes));
-  const expiresValue=s.invalid?'—':clockTime(s.start+s.activeMinutes*60000)+' LT'+(crossesDay(s.start,s.start+s.activeMinutes*60000)?' · next day':'');
+  const sessionTz=sessionDisplayTimeZone(s),timeSuffix=timeBasisLabel(sessionTz);
+  const expiresAt=s.start+s.activeMinutes*60000;
+  const expiresValue=s.invalid?'—':clockTime(expiresAt,sessionTz)+' '+timeSuffix+(crossesDay(s.start,expiresAt,sessionTz)?' · next day':'');
   const countdownClass=s.invalid||expired?'danger':remaining<600?'amber':'good';
   const genericLoutUnverified=!!genericType(s.originalInputs.selection)&&Engine.lout(s.originalInputs)===null;
-  $('sessionContent').innerHTML=`<div class="session-timer"><div id="sessionStatus" class="eyebrow ${s.invalid||expired?'danger':''}">${s.invalid?'HOT INVALIDATED':expired?'HOT EXPIRED':'Time remaining'}</div><div id="sessionCountdown" class="hot ${countdownClass}">${hhmm(remaining/60)}:${String(remaining%60).padStart(2,'0')}</div><div class="session-fluidline"><span class="session-fluid-name">${esc(f.type)} — ${esc(f.generic?'Generic':f.name)}</span><span class="session-fluid-ratio">${esc(ratioLabel(s.originalInputs))}</span></div></div><div class="session-details"><div class="detail"><span>HOT start</span><strong>${clockTime(s.start)} LT</strong></div><div class="detail current-weather"><span>Precipitation</span><strong>${esc(weatherInfo.precipLabel)}</strong></div>${weatherInfo.showVisibility?`<div class="detail"><span>Visibility</span><strong>${esc(weatherInfo.visibilityLabel)}</strong></div>`:''}${weatherInfo.showIntensity?`<div class="detail precip-intensity"><span>Precip intensity</span><strong class="${severity(String(weatherInfo.intensityLabel).toLowerCase())}">${esc(weatherInfo.intensityLabel)}</strong></div>`:''}<div class="detail"><span>${hotLabel}</span><strong>${hotValue}</strong></div><div class="detail"><span>Expires</span><strong>${expiresValue}</strong></div></div>${genericLoutUnverified?'<p class="result-lout-warning">Verify fluid LOUT before use</p>':''}${s.invalid?`<p class="hint danger">${esc(s.history.at(-1)?.reason||'No applicable active HOT.')} Improved conditions cannot restore this session.</p>`:''}<button class="secondary" type="button" id="updateWeather">Update weather</button><button class="secondary" type="button" id="endSession">End session</button>${s.history.length?`<details><summary class="small-note">Weather updates</summary><div class="event">${clockTime(s.calculatedAt)} LT • Initial Weather${sessionInitialWeatherText(s)?' • '+esc(sessionInitialWeatherText(s)):''} • Original HOT ${hhmm(s.originalMinutes)}</div>${s.history.map(h=>{const changeText=sessionHistoryChangeText(h);const outcome=h.reason?esc(h.reason):'Active HOT '+hhmm(h.minutes);return `<div class="event">${clockTime(h.at)} LT${changeText?' • '+esc(changeText):''} • ${outcome}</div>`}).join('')}</details>`:''}`;
+  $('sessionContent').innerHTML=`
+    <div class="session-basis-row"><div></div><div class="time-basis-toggle session-basis-toggle" role="group" aria-label="Session time basis"><button id="sessionBasisLT" type="button" aria-pressed="${s.displayTimeBasis!=='utc'}">LT</button><button id="sessionBasisUTC" type="button" aria-pressed="${s.displayTimeBasis==='utc'}">UTC</button></div></div>
+    <div class="session-timer"><div id="sessionStatus" class="eyebrow ${s.invalid||expired?'danger':''}">${s.invalid?'HOT INVALIDATED':expired?'HOT EXPIRED':'Time remaining'}</div><div id="sessionCountdown" class="hot ${countdownClass}">${hhmm(remaining/60)}:${String(remaining%60).padStart(2,'0')}</div><div class="session-fluidline"><span class="session-fluid-name">${esc(f.type)} — ${esc(f.generic?'Generic':f.name)}</span><span class="session-fluid-ratio">${esc(ratioLabel(s.originalInputs))}</span></div></div>
+    <div class="session-details">
+      <div class="detail session-expiry-primary"><span>HOT expires</span><strong>${expiresValue}</strong></div>
+      <div class="detail"><span>HOT start</span><strong>${clockTime(s.start,sessionTz)} ${timeSuffix}</strong></div>
+      <div class="detail current-weather"><span>Precipitation</span><strong>${esc(weatherInfo.precipLabel)}</strong></div>
+      ${weatherInfo.showVisibility?`<div class="detail"><span>Visibility</span><strong>${esc(weatherInfo.visibilityLabel)}</strong></div>`:''}
+      ${weatherInfo.showIntensity?`<div class="detail precip-intensity"><span>Precip intensity</span><strong class="${severity(String(weatherInfo.intensityLabel).toLowerCase())}">${esc(weatherInfo.intensityLabel)}</strong></div>`:''}
+      <div class="detail"><span>${hotLabel}</span><strong>${hotValue}</strong></div>
+    </div>
+    ${genericLoutUnverified?'<p class="result-lout-warning">Verify fluid LOUT before use</p>':''}
+    ${s.invalid?`<p class="hint danger">${esc(s.history.at(-1)?.reason||'No applicable active HOT.')} Improved conditions cannot restore this session.</p>`:''}
+    ${expired?'':`<button class="secondary" type="button" id="updateWeather">Update weather</button>`}
+    <button class="secondary" type="button" id="endSession">End session</button>
+    ${s.history.length?`<details><summary class="small-note">Weather updates</summary><div class="event">${clockTime(s.calculatedAt,sessionTz)} ${timeSuffix} • Initial Weather${sessionInitialWeatherText(s)?' • '+esc(sessionInitialWeatherText(s)):''} • Original HOT ${hhmm(s.originalMinutes)}</div>${s.history.map(h=>{const changeText=sessionHistoryChangeText(h);const outcome=h.reason?esc(h.reason):'Active HOT '+hhmm(h.minutes);return `<div class="event">${clockTime(h.at,sessionTz)} ${timeSuffix}${changeText?' • '+esc(changeText):''} • ${outcome}</div>`}).join('')}</details>`:''}`;
 }
+
 function openUpdate(){
   state.updateErrors={};state.sessionDraft=clone(state.session.current);openSheet('Update weather',{type:'update'});$('sheetBody').removeAttribute('role');
   $('sheetBody').innerHTML=`${weatherHTML('u-')}<button class="primary" type="button" id="applyWeather">Update active HOT</button><p class="hint">Original HOT start remains fixed. Improved weather does not add time.</p>`;
-  const x=state.sessionDraft;for(const k of ['oat','skin','vis','period'])$('u-'+k).value=Number.isNaN(x[k])?'':x[k]??'';if(Number.isFinite(x.vis))$('u-vis').value=String(Math.min(9999,Math.round(x.vis)));$('u-vis').dataset.normalized=$('u-vis').value;$('u-drizzle').checked=x.drizzleIdentified;refreshWeather('u-');
+  const x=state.sessionDraft;for(const k of ['oat','skin','vis','period'])$('u-'+k).value=Number.isNaN(x[k])?'':x[k]??'';if(Number.isFinite(x.vis))$('u-vis').value=String(Math.min(9999,Math.round(x.vis)));$('u-vis').dataset.normalized=$('u-vis').value;refreshWeather('u-');
 }
 function tickSession(){
+  if(cleanupTerminalSession(false)){if(state.screen==='session')renderSession();renderResult();return;}
   const s=state.session;if(state.screen!=='session'||!s||!$('overlay').hidden||!$('sessionCountdown'))return;
   const seconds=Math.max(0,Math.floor((s.start+s.activeMinutes*60000-Date.now())/1000));
   const status=s.invalid?'HOT INVALIDATED':seconds===0?'HOT EXPIRED':'Time remaining';
@@ -908,7 +1270,7 @@ function applyMetar(){
   const parsed=Weather.decode($('metarText').value);clearResult();state.autoWeather=null;state.metarError=!!parsed.error;
   $('metarMessage').textContent=parsed.error||'';$('metarMessage').hidden=!parsed.error;
   if(!parsed.error){
-    state.autoWeather=parsed;$('drizzle').checked=false;delete state.errors.metar;
+    state.autoWeather=parsed;delete state.errors.metar;
     // If the user has not selected an aerodrome, use the METAR station automatically
     // when it is one of the Appendix E airports available in HOTmate.
     if(state.airport==='ANY'&&StationAirports.some(a=>a.icao===parsed.station)){
@@ -943,8 +1305,37 @@ function clearOperationalValueForReentry(el){
   el.dataset.replaceArmed='false';
   if(el.dataset.temperature||el.dataset.integerInput)el.dataset.accepted='';
   if(el.id==='vis'||el.id==='u-vis')el.dataset.parseInvalid='false';
-  if(el.dataset.integerInput||['verifiedLout','freezingPoint'].includes(el.id))el.dataset.customInvalid='false';
+  if(el.dataset.integerInput||el.id==='verifiedLout')el.dataset.customInvalid='false';
   beginDeferredEdit(el);
+}
+// iOS Safari may aggressively center a focused input when the software keyboard opens.
+// Preserve the user's pre-focus scroll position, then reveal only the minimum area needed
+// to keep the active field visible above the keyboard. This prevents low fields from
+// jumping all the way toward the top of the screen.
+let keyboardFocusAnchor=null;
+function isKeyboardTextEntry(el){
+  return !!el&&el.matches?.('textarea,input[type=search],input[type=text],input[type=number],input:not([type])')&&!!el.closest?.('#main');
+}
+function rememberKeyboardFocusAnchor(el){
+  if(!isKeyboardTextEntry(el))return;
+  keyboardFocusAnchor={el,scrollTop:$('main').scrollTop,time:performance.now()};
+}
+function settleKeyboardFocus(){
+  const vv=window.visualViewport,active=document.activeElement,anchor=keyboardFocusAnchor;
+  if(!vv||!isKeyboardTextEntry(active)||!anchor||anchor.el!==active||performance.now()-anchor.time>650)return;
+  const main=$('main');
+  // Undo Safari's automatic centering first.
+  main.scrollTop=anchor.scrollTop;
+  requestAnimationFrame(()=>{
+    if(document.activeElement!==active)return;
+    const rect=active.getBoundingClientRect();
+    const safeTop=vv.offsetTop+12;
+    const safeBottom=vv.offsetTop+vv.height-18;
+    let delta=0;
+    if(rect.bottom>safeBottom)delta=rect.bottom-safeBottom;
+    else if(rect.top<safeTop)delta=rect.top-safeTop;
+    if(Math.abs(delta)>1)main.scrollTop+=delta;
+  });
 }
 // A filled operational input should clear on an intentional tap, but never just because
 // a scrolling gesture started on top of the field. Keep keyboard priming on pointerdown
@@ -952,6 +1343,7 @@ function clearOperationalValueForReentry(el){
 let operationalTap=null;
 document.addEventListener('pointerdown',e=>{
   const el=e.target;
+  rememberKeyboardFocusAnchor(el);
   if(!el?.dataset)return;
   if(el.dataset.temperature||el.dataset.visibilityInput||el.dataset.integerInput)primeNumericKeyboard(el);
   if(el.dataset.replaceValue==='true'&&el.value!==''){
@@ -1001,7 +1393,7 @@ document.addEventListener('click',e=>{
   if(b.dataset.picker){picker(b.dataset.picker,b.dataset.prefix||'');return;}
   if(b.dataset.value!==undefined&&state.sheet){choose(b.dataset.value);return;}
   if(b.dataset.screen){showScreen(b.dataset.screen);return;}
-  const actions={closeSheet,notesBtn:notes,startSessionBtn:openStart,confirmStart:startSession,updateWeather:openUpdate,applyWeather:updateSession,parseMetar:applyMetar,goCalculate:()=>showScreen('calc'),customSourceToggle:()=>{state.customLoutMode=state.customLoutMode==='fp'?'lout':'fp';$('verifiedLout').value='';$('freezingPoint').value='';for(const id of ['verifiedLout','freezingPoint']){$(id).dataset.accepted='';$(id).dataset.customInvalid='false';const display=$(id+'Invalid');if(display)display.hidden=true;const err=$(id+'Error');if(err){err.hidden=true;err.textContent='';}delete state.errors[id];}clearResult();refresh();},endSession:()=>{openSheet('End HOT session',{type:'end'});$('sheetBody').removeAttribute('role');$('sheetBody').innerHTML='<p class="small-note">End this treatment session and clear its timer?</p><button class="primary" type="button" id="confirmEnd">End session</button>';},confirmEnd:()=>{state.session=null;save('hotmate-session-v2',null);closeSheet();renderSession();renderResult();},modeManual:()=>setMode('manual'),modeAuto:()=>setMode('auto')};
+  const actions={closeSheet,notesBtn:notes,startSessionBtn:openStart,confirmStart:startSession,startBasisLT:()=>{if(state.startTimeUtcOverride){state.startTimeUtcOverride=false;refreshStartTimeZoneUI(true);}},startBasisUTC:()=>{if(!state.startTimeUtcOverride){state.startTimeUtcOverride=true;refreshStartTimeZoneUI(true);}},sessionBasisLT:()=>setSessionTimeBasis('lt'),sessionBasisUTC:()=>setSessionTimeBasis('utc'),updateWeather:openUpdate,applyWeather:updateSession,parseMetar:applyMetar,goCalculate:()=>showScreen('calc'),endSession:()=>{openSheet('End HOT session',{type:'end'});$('sheetBody').removeAttribute('role');$('sheetBody').innerHTML='<p class="small-note">End this treatment session and clear its timer?</p><button class="primary" type="button" id="confirmEnd">End session</button>';},confirmEnd:()=>{clearSession();closeSheet();renderSession();renderResult();},modeManual:()=>setMode('manual'),modeAuto:()=>setMode('auto')};
   actions[b.id]?.();
 });
 function setMode(mode){
@@ -1018,7 +1410,7 @@ function inputChanged(el){
 }
 // Legacy-style commit behavior: free-text/numeric operational inputs are edited first,
 // then accepted and validated only when editing is finished (blur/change/Calculate).
-const deferredInputIds=new Set(['oat','skin','vis','u-oat','u-skin','u-vis','actualPercent','verifiedLout','freezingPoint']);
+const deferredInputIds=new Set(['oat','skin','vis','u-oat','u-skin','u-vis','actualPercent','verifiedLout']);
 const isDeferredInput=el=>!!el&&deferredInputIds.has(el.id);
 function beginDeferredEdit(el){
   el.dataset.editing='true';
@@ -1030,7 +1422,7 @@ function beginDeferredEdit(el){
   const warning=$(el.id+'Warning');if(warning)warning.hidden=true;
   if(el.id==='vis'||el.id==='u-vis'){$(el.id+'Invalid').hidden=true;el.dataset.parseInvalid='false';}
   if(el.dataset.temperature){const display=$(el.id+'Invalid');if(display)display.hidden=true;}
-  if(['actualPercent','verifiedLout','freezingPoint'].includes(el.id)){
+  if(['actualPercent','verifiedLout'].includes(el.id)){
     el.dataset.customInvalid='false';const display=$(el.id+'Invalid');if(display)display.hidden=true;
     delete state.errors[el.id];const err=$(el.id+'Error');if(err){err.hidden=true;err.textContent='';}
   }
@@ -1052,7 +1444,7 @@ function commitDeferredEdit(el){
     if(prefix){state.updateErrors||={};if(errs[field])state.updateErrors[field]=errs[field];else delete state.updateErrors[field];}
     else {if(errs[field])state.errors[field]=errs[field];else delete state.errors[field];}
   }
-  if(!prefix&&['actualPercent','verifiedLout','freezingPoint'].includes(field)){
+  if(!prefix&&['actualPercent','verifiedLout'].includes(field)){
     const errs=Validation.errors(readInputs());if(errs[field])state.errors[field]=errs[field];else delete state.errors[field];
   }
   if(prefix){refreshWeather(prefix);clearUpdateErrors();}
@@ -1096,6 +1488,7 @@ document.addEventListener('paste',e=>{
 });
 document.addEventListener('focusin',e=>{
   const el=e.target;
+  if(isKeyboardTextEntry(el)&&(!keyboardFocusAnchor||keyboardFocusAnchor.el!==el||performance.now()-keyboardFocusAnchor.time>250))rememberKeyboardFocusAnchor(el);
   if((el.dataset.visibilityInput||el.dataset.temperature||el.dataset.integerInput)&&el.dataset.keyboardPrimed==='true'){
     // Focus was acquired as type=number only to request the iOS numeric keyboard.
     // Restore text semantics without blurring so '-' is visible and Visibility can still accept m / km.
@@ -1108,8 +1501,14 @@ document.addEventListener('focusout',e=>{
   if(isDeferredInput(e.target))commitDeferredEdit(e.target);
 });
 document.addEventListener('change',e=>{
+  if(e.target.id==='startTimeZoneSelect'){
+    state.startTimeZone=e.target.value||null;
+    state.startTimeUtcOverride=false;
+    refreshStartTimeZoneUI(true);
+    return;
+  }
   if(!isDeferredInput(e.target)&&(e.target.closest('#calcForm')||e.target.id.startsWith('u-')))inputChanged(e.target);
-  if(e.target.id==='theme'){document.documentElement.dataset.theme=e.target.value;save('hotmate-theme-v2',e.target.value);}
+  if(e.target.id==='theme'){applyTheme(e.target.value,true);}
 });
 $('calcForm').addEventListener('submit',e=>{e.preventDefault();calculate()});
 $('overlay').addEventListener('click',e=>{if(e.target===$('overlay'))closeSheet()});
@@ -1122,8 +1521,32 @@ document.addEventListener('keydown',e=>{
   }
   if(e.key==='ArrowDown'&&document.activeElement===$('sheetSearch')){$('sheetBody').querySelector('button')?.focus();e.preventDefault();}
 });
-// Keep a sheet above the on-screen keyboard on iOS without resizing the form.
-function viewport(){if(window.visualViewport){$('overlay').style.height=window.visualViewport.height+'px';$('overlay').style.top=window.visualViewport.offsetTop+'px';$('overlay').style.bottom='auto';$('sheet').style.maxHeight=Math.max(220,window.visualViewport.height-12)+'px';}}
+// Keep a sheet above the iOS keyboard, but do not shrink the backdrop for Safari browser chrome.
+let viewportBaseHeight=window.visualViewport?.height||window.innerHeight;
+function viewport(){
+  const vv=window.visualViewport;if(!vv)return;
+  const active=document.activeElement;
+  const textEntry=!!active&&(active.matches('textarea,input[type=search],input[type=text],input:not([type])'));
+  if(!textEntry)viewportBaseHeight=Math.max(viewportBaseHeight,vv.height);
+  const keyboardOpen=textEntry&&vv.height<viewportBaseHeight-120;
+  document.body.classList.toggle('keyboard-open',keyboardOpen);
+  if(keyboardOpen){
+    $('overlay').style.height=vv.height+'px';
+    $('overlay').style.top=vv.offsetTop+'px';
+    $('overlay').style.bottom='auto';
+    $('sheet').style.maxHeight=Math.max(220,vv.height-12)+'px';
+    // Safari can apply its own focus pan over several animation frames. Re-apply the
+    // pre-focus anchor briefly, then leave scrolling completely under user control.
+    settleKeyboardFocus();
+    setTimeout(settleKeyboardFocus,80);
+    setTimeout(settleKeyboardFocus,220);
+  }else{
+    $('overlay').style.height='';
+    $('overlay').style.top='';
+    $('overlay').style.bottom='';
+    $('sheet').style.maxHeight='';
+  }
+}
 window.visualViewport?.addEventListener('resize',viewport);window.visualViewport?.addEventListener('scroll',viewport);viewport();
 $('dataDetails').innerHTML=`<p>${StationAirports.length} Appendix E airports · ${DATA.fluids.length} distinct products · ${Object.keys(DATA.tables).length} precipitation tables plus frost.</p><p>Workbook SHA-256<br><code>${esc(DATA.sha256)}</code></p><p>FAA PDF SHA-256<br><code>${esc(DATA.sources.faaSha256)}</code></p>`;
 refresh();renderSession();
